@@ -20,8 +20,6 @@ To reproduce results:
 
 ## Citation
 
-Bhattacharyya, S., Duan, J., Vela, R.J., Bhakta, M., Bajona, P., Mammen, P.P.A., Hon, G.C., and Munshi, N.V. (2022). Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility. Circulation 146, 878–881..
-
 Samadrita Bhattacharyya#, Jialei Duan#, Ryan J. Vela, Minoti Bhakta, Pietro Bajona, Pradeep P.A. Mammen, Gary C. Hon* and Nikhil V. Munshi* (2022). **Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility.** _Circulation_ 146, 878–881.<br>
 DOI: <https://doi.org/10.1161/CIRCULATIONAHA.122.059659>
 
