@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jlduan.github.io/cardiomyopathy-etiology/cardiomyopathy.html</loc>
+    <lastmod>2022-09-20T00:37:31.768Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jlduan.github.io/cardiomyopathy-etiology/matrix.html</loc>
+    <lastmod>2022-09-19T23:39:37.911Z</lastmod>
+  </url>
+  <url>
     <loc>https://jlduan.github.io/cardiomyopathy-etiology/dataset.html</loc>
-    <lastmod>2022-08-11T20:27:53.820Z</lastmod>
+    <lastmod>2022-09-19T23:39:46.611Z</lastmod>
   </url>
   <url>
     <loc>https://jlduan.github.io/cardiomyopathy-etiology/index.html</loc>
-    <lastmod>2022-08-11T20:29:15.166Z</lastmod>
+    <lastmod>2022-09-19T23:39:50.698Z</lastmod>
   </url>
   <url>
     <loc>https://jlduan.github.io/cardiomyopathy-etiology/about.html</loc>
-    <lastmod>2022-08-12T19:24:25.125Z</lastmod>
+    <lastmod>2022-09-19T23:39:55.283Z</lastmod>
   </url>
   <url>
-    <loc>https://jlduan.github.io/cardiomyopathy-etiology/index_2022-08-11.html</loc>
-    <lastmod>2022-08-11T21:33:29.072Z</lastmod>
+    <loc>https://jlduan.github.io/cardiomyopathy-etiology/qc.html</loc>
+    <lastmod>2022-09-19T23:40:08.869Z</lastmod>
   </url>
 </urlset>
