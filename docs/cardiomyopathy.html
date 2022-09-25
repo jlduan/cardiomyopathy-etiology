@@ -128,14 +128,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 </script><link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Cardiomyopathy Diagnosis - Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
+<meta property="og:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
 <meta property="og:description" content="This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.">
-<meta property="og:image" content="https://raw.githubusercontent.com/jlduan/cardiomyopathy-etiology/gh-pages/docs/workflow.png">
+<meta property="og:image" content="https://jlduan.github.io/cardiomyopathy-etiology/workflow.png">
 <meta property="og:site-name" content="Cardiomyopathy Diagnosis">
+<meta property="og:image:height" content="671">
+<meta property="og:image:width" content="2093">
 <meta name="twitter:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
 <meta name="twitter:description" content="This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/jlduan/cardiomyopathy-etiology/gh-pages/docs/workflow.png">
+<meta name="twitter:image" content="https://jlduan.github.io/cardiomyopathy-etiology/workflow.png">
 <meta name="twitter:creator" content="@jlduan">
+<meta name="twitter:site" content="@jlduan">
+<meta name="twitter:image-height" content="671">
+<meta name="twitter:image-width" content="2093">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
 <meta name="citation_abstract" content="This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.
@@ -150,13 +155,14 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <meta name="citation_author" content="Pradeep P.A. Mammen">
 <meta name="citation_author" content="Gary C. Hon">
 <meta name="citation_author" content="Nikhil V. Munshi">
-<meta name="citation_publication_date" content="2022-09-23">
-<meta name="citation_cover_date" content="2022-09-23">
+<meta name="citation_publication_date" content="2022-09-25">
+<meta name="citation_cover_date" content="2022-09-25">
 <meta name="citation_year" content="2022">
 <meta name="citation_online_date" content="2022-09-12">
 <meta name="citation_fulltext_html_url" content="https://doi.org/10.1161/CIRCULATIONAHA.122.059659">
 <meta name="citation_issue" content="11">
 <meta name="citation_doi" content="10.1161/CIRCULATIONAHA.122.059659">
+<meta name="citation_issn" content="0009-7322">
 <meta name="citation_pmid" content="36095061">
 <meta name="citation_volume" content="146">
 <meta name="citation_language" content="en">
@@ -309,7 +315,7 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Fri Sep 23, 2022 17:51:17-05:00</p>
+      <p class="date">Sun Sep 25, 2022 14:02:35-05:00</p>
     </div>
   </div>
   
@@ -341,7 +347,7 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2022-09-23 17:50:31 CDT"</code></pre>
+<pre><code>[1] "2022-09-25 14:01:49 CDT"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -366,7 +372,7 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="co">## ── Attaching packages ────────────────────────────────── tidyverse 1.3.2.9000 ──</span></span>
 <span><span class="co">## ✔ ggplot2   3.3.6.9000        ✔ dplyr     1.0.99.9000  </span></span>
-<span><span class="co">## ✔ tibble    3.1.8.9001        ✔ stringr   1.4.1.9000   </span></span>
+<span><span class="co">## ✔ tibble    3.1.8.9002        ✔ stringr   1.4.1.9000   </span></span>
 <span><span class="co">## ✔ tidyr     1.2.1.9000        ✔ forcats   0.5.2.9000   </span></span>
 <span><span class="co">## ✔ readr     2.1.2.9000        ✔ lubridate 1.8.0.9000   </span></span>
 <span><span class="co">## ✔ purrr     0.9000.0.9000     </span></span>
@@ -1817,26 +1823,26 @@ low counts [2]     : 0, 0%
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>17:50:48 UMAP embedding parameters a = 1.896 b = 0.8006</code></pre>
+<pre><code>14:02:06 UMAP embedding parameters a = 1.896 b = 0.8006</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>17:50:48 Read 42 rows and found 205154 numeric columns</code></pre>
+<pre><code>14:02:06 Read 42 rows and found 205154 numeric columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>17:50:48 Using FNN for neighbor search, n_neighbors = 10</code></pre>
+<pre><code>14:02:06 Using FNN for neighbor search, n_neighbors = 10</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>17:50:49 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
-17:50:49 Initializing from normalized Laplacian + noise (using irlba)
-17:50:49 Commencing optimization for 500 epochs, with 552 positive edges
-17:50:50 Optimization finished
-17:50:50 UMAP embedding parameters a = 1.896 b = 0.8006
-17:50:50 Read 42 rows and found 5751 numeric columns
-17:50:50 Using FNN for neighbor search, n_neighbors = 10
-17:50:50 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
-17:50:51 Initializing from normalized Laplacian + noise (using irlba)
-17:50:51 Commencing optimization for 500 epochs, with 416 positive edges
-17:50:51 Optimization finished</code></pre>
+<pre><code>14:02:07 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
+14:02:07 Initializing from normalized Laplacian + noise (using irlba)
+14:02:07 Commencing optimization for 500 epochs, with 552 positive edges
+14:02:08 Optimization finished
+14:02:08 UMAP embedding parameters a = 1.896 b = 0.8006
+14:02:08 Read 42 rows and found 5751 numeric columns
+14:02:08 Using FNN for neighbor search, n_neighbors = 10
+14:02:08 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
+14:02:09 Initializing from normalized Laplacian + noise (using irlba)
+14:02:09 Commencing optimization for 500 epochs, with 416 positive edges
+14:02:09 Optimization finished</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -2352,7 +2358,7 @@ low counts [2]     : 0, 0%
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2022-09-23
+ date     2022-09-25
  pandoc   2.19.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -2458,7 +2464,7 @@ low counts [2]     : 0, 0%
  profvis                0.3.7         2020-11-02 [1] CRAN (R 4.2.0)
  promises               1.2.0.1       2021-02-11 [1] CRAN (R 4.2.0)
  ps                     1.7.1         2022-06-18 [1] CRAN (R 4.2.0)
- purrr                * 0.9000.0.9000 2022-09-23 [1] Github (tidyverse/purrr@7b5578c)
+ purrr                * 0.9000.0.9000 2022-09-24 [1] Github (tidyverse/purrr@4ab13f5)
  R.cache                0.16.0        2022-07-21 [1] CRAN (R 4.2.1)
  R.methodsS3            1.8.2         2022-06-13 [1] CRAN (R 4.2.0)
  R.oo                   1.25.0        2022-06-12 [1] CRAN (R 4.2.0)
@@ -2473,8 +2479,8 @@ low counts [2]     : 0, 0%
  remotes                2.4.2         2022-09-12 [1] Github (r-lib/remotes@bc0949d)
  reticulate             1.26          2022-08-31 [1] CRAN (R 4.2.1)
  rjson                  0.2.21        2022-01-09 [1] CRAN (R 4.2.0)
- rlang                  1.0.5.9000    2022-09-23 [1] Github (r-lib/rlang@a72c03c)
- rmarkdown              2.16.1        2022-08-25 [1] Github (rstudio/rmarkdown@b8a9879)
+ rlang                  1.0.6         2022-09-24 [1] Github (r-lib/rlang@66454bd)
+ rmarkdown              2.16.1        2022-09-24 [1] Github (rstudio/rmarkdown@9577707)
  RSQLite                2.2.17        2022-09-10 [1] CRAN (R 4.2.1)
  Rttf2pt1               1.3.10        2022-02-07 [1] CRAN (R 4.2.0)
  S4Vectors            * 0.34.0        2022-04-26 [1] Bioconductor
@@ -2489,7 +2495,7 @@ low counts [2]     : 0, 0%
  survival               3.4-0         2022-08-09 [2] CRAN (R 4.2.1)
  systemfonts            1.0.4         2022-02-11 [1] CRAN (R 4.2.0)
  textshaping            0.3.6         2021-10-13 [1] CRAN (R 4.2.0)
- tibble               * 3.1.8.9001    2022-09-23 [1] Github (tidyverse/tibble@eb132e7)
+ tibble               * 3.1.8.9002    2022-09-24 [1] Github (tidyverse/tibble@e9db4f4)
  tidyr                * 1.2.1.9000    2022-09-09 [1] Github (tidyverse/tidyr@653def2)
  tidyselect             1.1.2.9000    2022-09-21 [1] Github (r-lib/tidyselect@edd0a3b)
  tidyverse            * 1.3.2.9000    2022-09-12 [1] Github (tidyverse/tidyverse@3be8283)
@@ -2545,6 +2551,7 @@ low counts [2]     : 0, 0%
   date = {},
   url = {https://doi.org/10.1161/CIRCULATIONAHA.122.059659},
   doi = {10.1161/CIRCULATIONAHA.122.059659},
+  issn = {0009-7322},
   langid = {en},
   abstract = {This study establishes proof-of-concept for a
     cardiomyopathy diagnostic algorithm using chromatin accessibility
