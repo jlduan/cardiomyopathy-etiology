@@ -15,9 +15,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -44,43 +45,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -111,6 +82,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "panel-placement": "start",
   "type": "textbox",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -120,7 +96,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DX6PCXFCKG"></script><script type="text/javascript">
 
@@ -132,7 +109,7 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <meta property="og:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
 <meta property="og:description" content="This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.">
 <meta property="og:image" content="https://jlduan.github.io/cardiomyopathy-etiology/workflow.png">
-<meta property="og:site-name" content="Cardiomyopathy Diagnosis">
+<meta property="og:site_name" content="Cardiomyopathy Diagnosis">
 <meta property="og:image:height" content="671">
 <meta property="og:image:width" content="2093">
 <meta name="twitter:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
@@ -154,9 +131,9 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <meta name="citation_author" content="Pradeep P.A. Mammen">
 <meta name="citation_author" content="Gary C. Hon">
 <meta name="citation_author" content="Nikhil V. Munshi">
-<meta name="citation_publication_date" content="2022-09-25">
-<meta name="citation_cover_date" content="2022-09-25">
-<meta name="citation_year" content="2022">
+<meta name="citation_publication_date" content="2023-08-12">
+<meta name="citation_cover_date" content="2023-08-12">
+<meta name="citation_year" content="2023">
 <meta name="citation_online_date" content="2022-09-12">
 <meta name="citation_fulltext_html_url" content="https://doi.org/10.1161/CIRCULATIONAHA.122.059659">
 <meta name="citation_issue" content="11">
@@ -172,85 +149,85 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Quality Control</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qc.html">Preparation</a></li><li class="breadcrumb-item"><a href="./qc.html">QC</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
-      <a href="./" class="sidebar-logo-link">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
       <img src="./logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./"><strong>Cardiomyopathy Diagnosis</strong></a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/jlduan" title="Cardiomyopathy Diagnosis" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
-    <a href="" title="GitHub" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-github"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-<li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/jlduan/cardiomyopathy-etiology">
-          Source Code
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/jlduan/cardiomyopathy-etiology/issues">
-          Report a Bug
-          </a>
-        </li>
-    </ul>
-<a href="https://twitter.com/jlduan" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://github.com/jlduan" title="Cardiomyopathy Diagnosis" class="quarto-navigation-tool px-1" aria-label="Cardiomyopathy Diagnosis"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/jlduan/cardiomyopathy-etiology" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dataset.html" class="sidebar-item-text sidebar-link">Dataset</a>
+  <a href="./dataset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Preparation</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Preparation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./qc.html" class="sidebar-item-text sidebar-link active">QC</a>
+  <a href="./qc.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">QC</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matrix.html" class="sidebar-item-text sidebar-link">Matrix</a>
+  <a href="./matrix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matrix</span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cardiomyopathy.html" class="sidebar-item-text sidebar-link">Cardiomyopathy</a>
+  <a href="./cardiomyopathy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cardiomyopathy</span></a>
   </div>
 </li>
     </ul>
 </div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -274,51 +251,47 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title d-none d-lg-block">Quality Control</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qc.html">Preparation</a></li><li class="breadcrumb-item"><a href="./qc.html">QC</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Quality Control</h1>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/jlduan">Jialei Duan</a> <a href="mailto:duanjl+cardiomyopathy-etiology@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-4086-7461" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.utsouthwestern.edu/education/medical-school/departments/green-center">
+            UT Southwestern Medical Center
+            </a>
+          </p>
+      </div>
+    </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jialei Duan <a href="https://orcid.org/0000-0003-4086-7461" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Sun Sep 25, 2022 14:01:19-05:00</p>
+      <p class="date">Sat Aug 12, 2023 07:28:10-05:00</p>
     </div>
   </div>
   
     
-    <div>
-    <div class="quarto-title-meta-heading">Doi</div>
-    <div class="quarto-title-meta-contents">
-      <p class="doi">
-        <a href="https://doi.org/10.5281/zenodo.6605061">10.5281/zenodo.6605061</a>
-      </p>
-    </div>
-  </div>
   </div>
   
 
-</header><div class="cell">
 
-</div>
-<p><br></p>
-<div class="cell">
-
-</div>
+</header><p><br></p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2022-09-25 14:01:14 CDT"</code></pre>
+<pre><code>[1] "2023-08-12 07:28:04 CDT"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -335,22 +308,20 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="functions" class="level3"><h3 class="anchored" data-anchor-id="functions">Functions</h3>
-<div class="cell">
-
-</div>
 <p>Load required packages.</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">## ── Attaching packages ────────────────────────────────── tidyverse 1.3.2.9000 ──</span></span>
-<span><span class="co">## ✔ ggplot2   3.3.6.9000        ✔ dplyr     1.0.99.9000  </span></span>
-<span><span class="co">## ✔ tibble    3.1.8.9002        ✔ stringr   1.4.1.9000   </span></span>
-<span><span class="co">## ✔ tidyr     1.2.1.9000        ✔ forcats   0.5.2.9000   </span></span>
-<span><span class="co">## ✔ readr     2.1.2.9000        ✔ lubridate 1.8.0.9000   </span></span>
-<span><span class="co">## ✔ purrr     0.9000.0.9000     </span></span>
+<span><span class="co">## ── Attaching core tidyverse packages ─────────────────── tidyverse 2.0.0.9000 ──</span></span>
+<span><span class="co">## ✔ dplyr     1.1.2.9000     ✔ readr     2.1.4.9000</span></span>
+<span><span class="co">## ✔ forcats   1.0.0.9000     ✔ stringr   1.5.0.9000</span></span>
+<span><span class="co">## ✔ ggplot2   3.4.2.9000     ✔ tibble    3.2.1.9005</span></span>
+<span><span class="co">## ✔ lubridate 1.9.2.9000     ✔ tidyr     1.3.0.9000</span></span>
+<span><span class="co">## ✔ purrr     1.0.2.9000     </span></span>
 <span><span class="co">## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
 <span><span class="co">## ✖ dplyr::filter() masks stats::filter()</span></span>
 <span><span class="co">## ✖ dplyr::lag()    masks stats::lag()</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://Matrix.R-forge.R-project.org/">Matrix</a></span><span class="op">)</span></span>
+<span><span class="co">## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://Matrix.R-forge.R-project.org">Matrix</a></span><span class="op">)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Attaching package: 'Matrix'</span></span>
 <span><span class="co">## </span></span>
@@ -372,37 +343,31 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">`%+replace%`</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">`%+replace%`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 </section><section id="python-env" class="level3"><h3 class="anchored" data-anchor-id="python-env">Python env</h3>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">np</span> <span class="op">&lt;-</span> <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/import.html">import</a></span><span class="op">(</span><span class="st">"numpy"</span>, convert <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"numpy version:"</span>, <span class="va">np</span><span class="op">$</span><span class="va">`__version__`</span>, <span class="st">"\n"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>numpy version: 1.22.4 </code></pre>
+<pre><code>numpy version: 1.24.3 </code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/py_config.html">py_config</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>python:         /Users/jialei/.pyenv/shims/python
-libpython:      /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/libpython3.9.dylib
-pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10:/Users/jialei/.pyenv/versions/mambaforge-4.10.3-10
-version:        3.9.13 | packaged by conda-forge | (main, May 27 2022, 17:00:33)  [Clang 13.0.1 ]
-numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
-numpy_version:  1.22.4
-numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
+libpython:      /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/libpython3.10.dylib
+pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3:/Users/jialei/.pyenv/versions/mambaforge-22.9.0-3
+version:        3.10.9 | packaged by conda-forge | (main, Feb  2 2023, 20:26:08) [Clang 14.0.6 ]
+numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
+numpy_version:  1.24.3
+numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
 
 NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </div>
 </div>
 </section></section><section id="qc" class="level2"><h2 class="anchored" data-anchor-id="qc">QC</h2>
 <section id="tss-enrichment-score" class="level3"><h3 class="anchored" data-anchor-id="tss-enrichment-score">TSS enrichment score</h3>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Data</a></li>
@@ -499,8 +464,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-tss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="qc_files/figure-html/fig-tss-1.png" style="width:75.0%;height:75.0%" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: TSS enrichment score</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;1: TSS enrichment score</figcaption></figure>
 </div>
 </div>
 </div>
@@ -591,9 +555,6 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </div>
 </div>
 </section><section id="mitochondrial-percentage" class="level3"><h3 class="anchored" data-anchor-id="mitochondrial-percentage">Mitochondrial percentage</h3>
-<div class="cell">
-
-</div>
 <div class="cell fig-cap-location-bottom" data-layout-align="center">
 <details><summary>Code</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dataset</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mt_ratio <span class="op">=</span> <span class="va">num_reads_q10_mt</span> <span class="op">/</span> <span class="va">num_reads_q10</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -630,16 +591,12 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-mt" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="qc_files/figure-html/fig-mt-1.png" style="width:75.0%;height:75.0%" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Mitochondrial percentage</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;2: Mitochondrial percentage</figcaption></figure>
 </div>
 </div>
 </div>
 </section><section id="fragment-size-distribution" class="level3"><h3 class="anchored" data-anchor-id="fragment-size-distribution">Fragment size distribution</h3>
-<div class="cell">
-
-</div>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Data</a></li>
@@ -738,8 +695,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-fragment_size" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="qc_files/figure-html/fig-fragment_size-1.png" style="width:75.0%;height:75.0%" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Fragment size distribution</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;3: Fragment size distribution</figcaption></figure>
 </div>
 </div>
 </div>
@@ -808,21 +764,21 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 6
-   insert_size All_Reads.fr_count All_Reads.rf_count all_reads…¹ norm_…² categ…³
-         &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;  
- 1          20                 59                 62          59   -6.53 HCM    
- 2          21                 81                100          81   -6.40 HCM    
- 3          22                135                115         135   -6.17 HCM    
- 4          23                169                174         169   -6.08 HCM    
- 5          24                362                374         362   -5.75 HCM    
- 6          25               1357               1427        1357   -5.17 HCM    
- 7          26              23899              23859       23899   -3.93 HCM    
- 8          27              49856              49877       49856   -3.61 HCM    
- 9          28              46698              46688       46698   -3.64 HCM    
-10          29              46807              46847       46807   -3.63 HCM    
-11          30              42295              42213       42295   -3.68 HCM    
-12          31              36400              36158       36400   -3.74 HCM    
-# … with abbreviated variable names ¹​all_reads_count, ²​norm_count, ³​category</code></pre>
+   insert_size All_Reads.fr_count All_Reads.rf_count all_reads_count norm_count
+         &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;
+ 1          20                 59                 62              59      -6.53
+ 2          21                 81                100              81      -6.40
+ 3          22                135                115             135      -6.17
+ 4          23                169                174             169      -6.08
+ 5          24                362                374             362      -5.75
+ 6          25               1357               1427            1357      -5.17
+ 7          26              23899              23859           23899      -3.93
+ 8          27              49856              49877           49856      -3.61
+ 9          28              46698              46688           46698      -3.64
+10          29              46807              46847           46807      -3.63
+11          30              42295              42213           42295      -3.68
+12          31              36400              36158           36400      -3.74
+# ℹ 1 more variable: category &lt;fct&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -859,7 +815,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <span>        pattern <span class="op">=</span> <span class="st">"_CollectInsertSizeMetrics.txt"</span></span>
 <span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
@@ -990,8 +946,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-chromatin_states" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="qc_files/figure-html/fig-chromatin_states-1.png" style="width:90.0%;height:90.0%" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Chromatin states</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;4: Chromatin states</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1004,130 +959,122 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.1 (2022-06-23)
- os       macOS Monterey 12.6
- system   aarch64, darwin21.6.0
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin22.4.0
  ui       unknown
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2022-09-25
- pandoc   2.19.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2023-08-12
+ pandoc   2.19.2 @ /Users/jialei/.pyenv/shims/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package       * version       date (UTC) lib source
- BayesFactor     0.9.12-4.4    2022-07-05 [1] CRAN (R 4.2.1)
- bit             4.0.4         2020-08-04 [1] CRAN (R 4.2.0)
- bit64           4.0.5         2020-08-30 [1] CRAN (R 4.2.0)
- cachem          1.0.6         2021-08-19 [1] CRAN (R 4.2.0)
- callr           3.7.2         2022-08-22 [1] CRAN (R 4.2.1)
- circlize        0.4.15        2022-05-10 [1] CRAN (R 4.2.0)
- cli             3.4.1         2022-09-23 [1] CRAN (R 4.2.1)
- coda            0.19-4        2020-09-30 [1] CRAN (R 4.2.0)
- colorspace      2.0-3         2022-02-21 [1] CRAN (R 4.2.0)
- crayon          1.5.1         2022-03-26 [1] CRAN (R 4.2.0)
- devtools        2.4.4.9000    2022-09-23 [1] Github (r-lib/devtools@9e2793a)
- digest          0.6.29        2021-12-01 [1] CRAN (R 4.2.0)
- dplyr         * 1.0.99.9000   2022-09-23 [1] Github (tidyverse/dplyr@19c2be3)
- ellipsis        0.3.2         2021-04-29 [1] CRAN (R 4.2.0)
- evaluate        0.16          2022-08-09 [1] CRAN (R 4.2.1)
- extrafont     * 0.18          2022-04-12 [1] CRAN (R 4.2.0)
- extrafontdb     1.0           2012-06-11 [1] CRAN (R 4.2.0)
- fansi           1.0.3         2022-03-24 [1] CRAN (R 4.2.0)
- farver          2.1.1         2022-07-06 [1] CRAN (R 4.2.1)
- fastmap         1.1.0         2021-01-25 [1] CRAN (R 4.2.0)
- forcats       * 0.5.2.9000    2022-08-20 [1] Github (tidyverse/forcats@bd319e0)
- fs              1.5.2.9000    2022-08-24 [1] Github (r-lib/fs@238032f)
- generics        0.1.3         2022-07-05 [1] CRAN (R 4.2.1)
- ggplot2       * 3.3.6.9000    2022-09-12 [1] Github (tidyverse/ggplot2@a58b48c)
- ggridges        0.5.3         2021-01-08 [1] CRAN (R 4.2.0)
- GlobalOptions   0.1.2         2020-06-10 [1] CRAN (R 4.2.0)
- glue            1.6.2.9000    2022-04-22 [1] Github (tidyverse/glue@d47d6c7)
- gtable          0.3.1.9000    2022-09-01 [1] Github (r-lib/gtable@c1a7a81)
- hms             1.1.2         2022-08-19 [1] CRAN (R 4.2.1)
- htmltools       0.5.3         2022-07-18 [1] CRAN (R 4.2.1)
- htmlwidgets     1.5.4         2022-08-23 [1] Github (ramnathv/htmlwidgets@400cf1a)
- httpuv          1.6.6         2022-09-08 [1] CRAN (R 4.2.1)
- jpeg            0.1-9         2021-07-24 [1] CRAN (R 4.2.0)
- jsonlite        1.8.0         2022-02-22 [1] CRAN (R 4.2.0)
- knitr           1.40          2022-08-24 [1] CRAN (R 4.2.1)
- labeling        0.4.2         2020-10-20 [1] CRAN (R 4.2.0)
- later           1.3.0         2021-08-18 [1] CRAN (R 4.2.0)
- lattice         0.20-45       2021-09-22 [2] CRAN (R 4.2.1)
- lifecycle       1.0.2.9000    2022-09-23 [1] Github (r-lib/lifecycle@0a6860a)
- lubridate     * 1.8.0.9000    2022-05-24 [1] Github (tidyverse/lubridate@0bb49b2)
- magrittr        2.0.3         2022-03-30 [1] CRAN (R 4.2.0)
- Matrix        * 1.5-1         2022-09-13 [1] CRAN (R 4.2.1)
- MatrixModels    0.5-1         2022-09-11 [1] CRAN (R 4.2.1)
- memoise         2.0.1         2021-11-26 [1] CRAN (R 4.2.0)
- mime            0.12          2021-09-28 [1] CRAN (R 4.2.0)
- miniUI          0.1.1.1       2018-05-18 [1] CRAN (R 4.2.0)
- munsell         0.5.0         2018-06-12 [1] CRAN (R 4.2.0)
- mvtnorm         1.1-3         2021-10-08 [1] CRAN (R 4.2.1)
- patchwork     * 1.1.2.9000    2022-08-20 [1] Github (thomasp85/patchwork@c14c960)
- pbapply         1.5-0         2021-09-16 [1] CRAN (R 4.2.0)
- pillar          1.8.1         2022-08-19 [1] CRAN (R 4.2.1)
- pkgbuild        1.3.1         2021-12-20 [1] CRAN (R 4.2.0)
- pkgconfig       2.0.3         2019-09-22 [1] CRAN (R 4.2.0)
- pkgload         1.3.0         2022-06-27 [1] CRAN (R 4.2.1)
- plyr            1.8.7         2022-03-24 [1] CRAN (R 4.2.0)
- png             0.1-7         2013-12-03 [1] CRAN (R 4.2.0)
- prettyunits     1.1.1.9000    2022-04-22 [1] Github (r-lib/prettyunits@8706d89)
- processx        3.7.0         2022-07-07 [1] CRAN (R 4.2.1)
- profvis         0.3.7         2020-11-02 [1] CRAN (R 4.2.0)
- promises        1.2.0.1       2021-02-11 [1] CRAN (R 4.2.0)
- ps              1.7.1         2022-06-18 [1] CRAN (R 4.2.0)
- purrr         * 0.9000.0.9000 2022-09-24 [1] Github (tidyverse/purrr@4ab13f5)
- R.cache         0.16.0        2022-07-21 [1] CRAN (R 4.2.1)
- R.methodsS3     1.8.2         2022-06-13 [1] CRAN (R 4.2.0)
- R.oo            1.25.0        2022-06-12 [1] CRAN (R 4.2.0)
- R.utils         2.12.0        2022-06-28 [1] CRAN (R 4.2.1)
- R6              2.5.1.9000    2022-08-04 [1] Github (r-lib/R6@87d5e45)
- ragg            1.2.2.9000    2022-09-12 [1] Github (r-lib/ragg@904e145)
- Rcpp            1.0.9         2022-07-08 [1] CRAN (R 4.2.1)
- readr         * 2.1.2.9000    2022-09-20 [1] Github (tidyverse/readr@5cac6ed)
- remotes         2.4.2         2022-09-12 [1] Github (r-lib/remotes@bc0949d)
- reticulate      1.26          2022-08-31 [1] CRAN (R 4.2.1)
- rlang           1.0.6         2022-09-24 [1] Github (r-lib/rlang@66454bd)
- rmarkdown       2.16.1        2022-09-24 [1] Github (rstudio/rmarkdown@9577707)
- Rttf2pt1        1.3.10        2022-02-07 [1] CRAN (R 4.2.0)
- scales          1.2.1.9000    2022-08-20 [1] Github (r-lib/scales@b3df2fb)
- sessioninfo     1.2.2         2021-12-06 [1] CRAN (R 4.2.0)
- shape           1.4.6         2021-05-19 [1] CRAN (R 4.2.0)
- shiny           1.7.2         2022-07-19 [1] CRAN (R 4.2.1)
- stringi         1.7.8         2022-07-11 [1] CRAN (R 4.2.1)
- stringr       * 1.4.1.9000    2022-08-21 [1] Github (tidyverse/stringr@792bc92)
- styler        * 1.7.0.9002    2022-09-21 [1] Github (r-lib/styler@1f4437b)
- systemfonts     1.0.4         2022-02-11 [1] CRAN (R 4.2.0)
- textshaping     0.3.6         2021-10-13 [1] CRAN (R 4.2.0)
- tibble        * 3.1.8.9002    2022-09-24 [1] Github (tidyverse/tibble@e9db4f4)
- tidyr         * 1.2.1.9000    2022-09-09 [1] Github (tidyverse/tidyr@653def2)
- tidyselect      1.1.2.9000    2022-09-21 [1] Github (r-lib/tidyselect@edd0a3b)
- tidyverse     * 1.3.2.9000    2022-09-12 [1] Github (tidyverse/tidyverse@3be8283)
- tzdb            0.3.0         2022-03-28 [1] CRAN (R 4.2.0)
- urlchecker      1.0.1         2021-11-30 [1] CRAN (R 4.2.0)
- usethis         2.1.6.9000    2022-09-23 [1] Github (r-lib/usethis@8ecb7ab)
- utf8            1.2.2         2021-07-24 [1] CRAN (R 4.2.0)
- vctrs           0.4.1.9000    2022-09-19 [1] Github (r-lib/vctrs@0a219ba)
- vroom           1.5.7.9000    2022-09-09 [1] Github (r-lib/vroom@0c2423e)
- withr           2.5.0         2022-03-03 [1] CRAN (R 4.2.0)
- xfun            0.33          2022-09-12 [1] CRAN (R 4.2.1)
- xtable          1.8-4         2019-04-21 [1] CRAN (R 4.2.0)
- yaml            2.3.5         2022-02-21 [1] CRAN (R 4.2.0)
- yarrr           0.1.6         2022-04-22 [1] Github (ndphillips/yarrr@e2e4488)
+ package       * version     date (UTC) lib source
+ BayesFactor     0.9.12-4.4  2022-07-05 [1] CRAN (R 4.3.0)
+ bit             4.0.5       2022-11-15 [1] CRAN (R 4.3.0)
+ bit64           4.0.5       2020-08-30 [1] CRAN (R 4.3.0)
+ cachem          1.0.8       2023-05-01 [1] CRAN (R 4.3.0)
+ callr           3.7.3       2022-11-02 [1] CRAN (R 4.3.0)
+ circlize        0.4.15      2022-05-10 [1] CRAN (R 4.3.0)
+ cli             3.6.1       2023-03-23 [1] CRAN (R 4.3.0)
+ coda            0.19-4      2020-09-30 [1] CRAN (R 4.3.0)
+ colorspace      2.1-0       2023-01-23 [1] CRAN (R 4.3.0)
+ crayon          1.5.2       2022-09-29 [1] CRAN (R 4.3.0)
+ devtools        2.4.5.9000  2023-08-11 [1] Github (r-lib/devtools@163c3f2)
+ digest          0.6.33      2023-07-07 [1] CRAN (R 4.3.1)
+ dplyr         * 1.1.2.9000  2023-07-19 [1] Github (tidyverse/dplyr@c963d4d)
+ ellipsis        0.3.2       2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate        0.21        2023-05-05 [1] CRAN (R 4.3.0)
+ extrafont     * 0.19        2023-01-18 [1] CRAN (R 4.3.0)
+ extrafontdb     1.0         2012-06-11 [1] CRAN (R 4.3.0)
+ fansi           1.0.4       2023-01-22 [1] CRAN (R 4.3.0)
+ farver          2.1.1       2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap         1.1.1       2023-02-24 [1] CRAN (R 4.3.0)
+ forcats       * 1.0.0.9000  2023-04-23 [1] Github (tidyverse/forcats@4a8525a)
+ fs              1.6.3       2023-07-20 [1] CRAN (R 4.3.1)
+ generics        0.1.3       2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2       * 3.4.2.9000  2023-08-11 [1] Github (tidyverse/ggplot2@2cd0e96)
+ ggridges        0.5.5       2023-04-24 [1] Github (wilkelab/ggridges@543a092)
+ GlobalOptions   0.1.2       2020-06-10 [1] CRAN (R 4.3.0)
+ glue            1.6.2.9000  2023-04-23 [1] Github (tidyverse/glue@cbac82a)
+ gtable          0.3.3.9000  2023-04-23 [1] Github (r-lib/gtable@c56fd4f)
+ hms             1.1.3       2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools       0.5.6       2023-08-10 [1] CRAN (R 4.3.1)
+ htmlwidgets     1.6.2       2023-03-17 [1] CRAN (R 4.3.0)
+ jpeg            0.1-10      2022-11-29 [1] CRAN (R 4.3.0)
+ jsonlite        1.8.7       2023-06-29 [1] CRAN (R 4.3.1)
+ knitr           1.43        2023-05-25 [1] CRAN (R 4.3.0)
+ labeling        0.4.2       2020-10-20 [1] CRAN (R 4.3.0)
+ lattice         0.21-8      2023-04-05 [2] CRAN (R 4.3.1)
+ lifecycle       1.0.3       2022-10-07 [1] CRAN (R 4.3.0)
+ lubridate     * 1.9.2.9000  2023-07-22 [1] Github (tidyverse/lubridate@cae67ea)
+ magrittr        2.0.3       2022-03-30 [1] CRAN (R 4.3.0)
+ Matrix        * 1.6-0       2023-07-08 [2] CRAN (R 4.3.1)
+ MatrixModels    0.5-2       2023-07-10 [1] CRAN (R 4.3.1)
+ memoise         2.0.1       2021-11-26 [1] CRAN (R 4.3.0)
+ munsell         0.5.0       2018-06-12 [1] CRAN (R 4.3.0)
+ mvtnorm         1.2-2       2023-06-08 [1] CRAN (R 4.3.0)
+ patchwork     * 1.1.2.9000  2023-08-11 [1] Github (thomasp85/patchwork@bd57553)
+ pbapply         1.7-2       2023-06-27 [1] CRAN (R 4.3.1)
+ pillar          1.9.0       2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild        1.4.2       2023-06-26 [1] CRAN (R 4.3.1)
+ pkgconfig       2.0.3       2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload         1.3.2.9000  2023-07-05 [1] Github (r-lib/pkgload@3cf9896)
+ png             0.1-8       2022-11-29 [1] CRAN (R 4.3.0)
+ prettyunits     1.1.1.9000  2023-04-23 [1] Github (r-lib/prettyunits@8706d89)
+ processx        3.8.2       2023-06-30 [1] CRAN (R 4.3.1)
+ ps              1.7.5       2023-04-18 [1] CRAN (R 4.3.0)
+ purrr         * 1.0.2.9000  2023-08-11 [1] Github (tidyverse/purrr@ac4f5a9)
+ R.cache         0.16.0      2022-07-21 [1] CRAN (R 4.3.0)
+ R.methodsS3     1.8.2       2022-06-13 [1] CRAN (R 4.3.0)
+ R.oo            1.25.0      2022-06-12 [1] CRAN (R 4.3.0)
+ R.utils         2.12.2      2022-11-11 [1] CRAN (R 4.3.0)
+ R6              2.5.1.9000  2023-04-23 [1] Github (r-lib/R6@e97cca7)
+ ragg            1.2.5       2023-01-12 [1] CRAN (R 4.3.0)
+ Rcpp            1.0.11      2023-07-06 [1] CRAN (R 4.3.1)
+ readr         * 2.1.4.9000  2023-08-03 [1] Github (tidyverse/readr@80e4dc1)
+ remotes         2.4.2.9000  2023-06-09 [1] Github (r-lib/remotes@8875171)
+ reticulate      1.31        2023-08-10 [1] CRAN (R 4.3.1)
+ rlang           1.1.1.9000  2023-06-09 [1] Github (r-lib/rlang@c55f602)
+ rmarkdown       2.23.4      2023-07-27 [1] Github (rstudio/rmarkdown@054d735)
+ rstudioapi      0.15.0.9000 2023-07-19 [1] Github (rstudio/rstudioapi@feceaef)
+ Rttf2pt1        1.3.12      2023-01-22 [1] CRAN (R 4.3.0)
+ scales          1.2.1       2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo     1.2.2       2021-12-06 [1] CRAN (R 4.3.0)
+ shape           1.4.6       2021-05-19 [1] CRAN (R 4.3.0)
+ stringi         1.7.12      2023-01-11 [1] CRAN (R 4.3.0)
+ stringr       * 1.5.0.9000  2023-08-11 [1] Github (tidyverse/stringr@08ff36f)
+ styler        * 1.10.1      2023-07-17 [1] Github (r-lib/styler@aca7223)
+ systemfonts     1.0.4       2022-02-11 [1] CRAN (R 4.3.0)
+ textshaping     0.3.6       2021-10-13 [1] CRAN (R 4.3.0)
+ tibble        * 3.2.1.9005  2023-05-28 [1] Github (tidyverse/tibble@4de5c15)
+ tidyr         * 1.3.0.9000  2023-04-23 [1] Github (tidyverse/tidyr@0764e65)
+ tidyselect      1.2.0       2022-10-10 [1] CRAN (R 4.3.0)
+ tidyverse     * 2.0.0.9000  2023-04-23 [1] Github (tidyverse/tidyverse@8ec2e1f)
+ timechange      0.2.0       2023-01-11 [1] CRAN (R 4.3.0)
+ tzdb            0.4.0       2023-05-12 [1] CRAN (R 4.3.0)
+ usethis         2.2.2.9000  2023-07-11 [1] Github (r-lib/usethis@467ff57)
+ utf8            1.2.3       2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs           0.6.3       2023-06-14 [1] CRAN (R 4.3.0)
+ vroom           1.6.3.9000  2023-04-30 [1] Github (tidyverse/vroom@89b6aac)
+ withr           2.5.0       2022-03-03 [1] CRAN (R 4.3.0)
+ xfun            0.40        2023-08-09 [1] CRAN (R 4.3.1)
+ yaml            2.3.7       2023-01-23 [1] CRAN (R 4.3.0)
+ yarrr           0.1.6       2023-04-23 [1] Github (ndphillips/yarrr@e2e4488)
 
- [1] /opt/homebrew/lib/R/4.2/site-library
- [2] /opt/homebrew/Cellar/r/4.2.1_4/lib/R/library
+ [1] /opt/homebrew/lib/R/4.3/site-library
+ [2] /opt/homebrew/Cellar/r/4.3.1/lib/R/library
 
 ─ Python configuration ───────────────────────────────────────────────────────
  python:         /Users/jialei/.pyenv/shims/python
- libpython:      /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/libpython3.9.dylib
- pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10:/Users/jialei/.pyenv/versions/mambaforge-4.10.3-10
- version:        3.9.13 | packaged by conda-forge | (main, May 27 2022, 17:00:33)  [Clang 13.0.1 ]
- numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
- numpy_version:  1.22.4
- numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
+ libpython:      /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/libpython3.10.dylib
+ pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3:/Users/jialei/.pyenv/versions/mambaforge-22.9.0-3
+ version:        3.10.9 | packaged by conda-forge | (main, Feb  2 2023, 20:26:08) [Clang 14.0.6 ]
+ numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
+ numpy_version:  1.24.3
+ numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
  
  NOTE: Python version was forced by RETICULATE_PYTHON
 
@@ -1137,11 +1084,10 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <p><br></p>
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{bhattacharyya,
-  author = {Samadrita Bhattacharyya and Jialei Duan and Ryan J. Vela and
-    Minoti Bhakta and Pietro Bajona and Pradeep P.A. Mammen and Gary C.
-    Hon and Nikhil V. Munshi},
-  editor = {},
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{bhattacharyya2023,
+  author = {Bhattacharyya, Samadrita and Duan, Jialei and J. Vela, Ryan
+    and Bhakta, Minoti and Bajona, Pietro and P.A. Mammen, Pradeep and
+    C. Hon, Gary and V. Munshi, Nikhil},
   publisher = {American Heart Association},
   title = {Accurate {Classification} of {Cardiomyopathy} {Diagnosis} by
     {Chromatin} {Accessibility}},
@@ -1149,15 +1095,15 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
   volume = {146},
   number = {11},
   pages = {878 - 881},
-  date = {},
+  date = {2023-08-12},
   url = {https://doi.org/10.1161/CIRCULATIONAHA.122.059659},
   doi = {10.1161/CIRCULATIONAHA.122.059659},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bhattacharyya" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Samadrita Bhattacharyya, Jialei Duan, Ryan J. Vela, Minoti Bhakta,
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bhattacharyya2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Bhattacharyya, Samadrita, Jialei Duan, Ryan J. Vela, Minoti Bhakta,
 Pietro Bajona, Pradeep P.A. Mammen, Gary C. Hon, and Nikhil V. Munshi.
-n.d. <span>“Accurate Classification of Cardiomyopathy Diagnosis by
+2023. <span>“Accurate Classification of Cardiomyopathy Diagnosis by
 Chromatin Accessibility.”</span> <em>Circulation</em> 146 (11): 878–81.
 <a href="https://doi.org/10.1161/CIRCULATIONAHA.122.059659">https://doi.org/10.1161/CIRCULATIONAHA.122.059659</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -1201,6 +1147,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1269,13 +1242,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1302,9 +1277,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1340,10 +1329,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1353,8 +1341,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1369,6 +1366,195 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1407,12 +1593,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/leafletjs\.com/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/leafletjs\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1434,26 +1620,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Copyright © 2022, Jialei Duan</div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-left">
+<p>Copyright © 2022 - 2023, Jialei Duan</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology/blob/main/LICENSE"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> License</a>
+    <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology/blob/main/LICENSE">
+<p><i class="fa-solid fa-file-lines" aria-hidden="true"></i> License</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</a>
+    <a class="nav-link" href="./about.html">
+<p><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</p>
+</a>
   </li>  
 </ul>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jlduan">
-      <i class="bi bi-twitter" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology">
       <i class="bi bi-github" role="img">
 </i> 

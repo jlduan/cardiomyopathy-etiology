@@ -15,9 +15,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -44,43 +45,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -110,6 +81,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "panel-placement": "start",
   "type": "textbox",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -119,7 +95,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DX6PCXFCKG"></script><script type="text/javascript">
 
@@ -131,7 +108,7 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <meta property="og:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
 <meta property="og:description" content="This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.">
 <meta property="og:image" content="https://jlduan.github.io/cardiomyopathy-etiology/workflow.png">
-<meta property="og:site-name" content="Cardiomyopathy Diagnosis">
+<meta property="og:site_name" content="Cardiomyopathy Diagnosis">
 <meta property="og:image:height" content="671">
 <meta property="og:image:width" content="2093">
 <meta name="twitter:title" content="Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility">
@@ -155,9 +132,9 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <meta name="citation_author" content="Pradeep P.A. Mammen">
 <meta name="citation_author" content="Gary C. Hon">
 <meta name="citation_author" content="Nikhil V. Munshi">
-<meta name="citation_publication_date" content="2022-09-25">
-<meta name="citation_cover_date" content="2022-09-25">
-<meta name="citation_year" content="2022">
+<meta name="citation_publication_date" content="2023-08-12">
+<meta name="citation_cover_date" content="2023-08-12">
+<meta name="citation_year" content="2023">
 <meta name="citation_online_date" content="2022-09-12">
 <meta name="citation_fulltext_html_url" content="https://doi.org/10.1161/CIRCULATIONAHA.122.059659">
 <meta name="citation_issue" content="11">
@@ -174,85 +151,85 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cardiomyopathy.html">Cardiomyopathy</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
-      <a href="./" class="sidebar-logo-link">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
       <img src="./logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./"><strong>Cardiomyopathy Diagnosis</strong></a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/jlduan" title="Cardiomyopathy Diagnosis" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
-    <a href="" title="GitHub" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-github"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-<li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/jlduan/cardiomyopathy-etiology">
-          Source Code
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/jlduan/cardiomyopathy-etiology/issues">
-          Report a Bug
-          </a>
-        </li>
-    </ul>
-<a href="https://twitter.com/jlduan" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://github.com/jlduan" title="Cardiomyopathy Diagnosis" class="quarto-navigation-tool px-1" aria-label="Cardiomyopathy Diagnosis"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/jlduan/cardiomyopathy-etiology" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dataset.html" class="sidebar-item-text sidebar-link">Dataset</a>
+  <a href="./dataset.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Preparation</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Preparation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./qc.html" class="sidebar-item-text sidebar-link">QC</a>
+  <a href="./qc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">QC</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matrix.html" class="sidebar-item-text sidebar-link">Matrix</a>
+  <a href="./matrix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matrix</span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cardiomyopathy.html" class="sidebar-item-text sidebar-link active">Cardiomyopathy</a>
+  <a href="./cardiomyopathy.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cardiomyopathy</span></a>
   </div>
 </li>
     </ul>
 </div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -298,56 +275,52 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title d-none d-lg-block">Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility</h1>
+<h1 class="title">Accurate Classification of Cardiomyopathy Diagnosis by Chromatin Accessibility</h1>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/jlduan">Jialei Duan</a> <a href="mailto:duanjl+cardiomyopathy-etiology@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-4086-7461" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.utsouthwestern.edu/education/medical-school/departments/green-center">
+            UT Southwestern Medical Center
+            </a>
+          </p>
+      </div>
+    </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jialei Duan <a href="https://orcid.org/0000-0003-4086-7461" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Sun Sep 25, 2022 14:02:35-05:00</p>
+      <p class="date">Sat Aug 12, 2023 07:24:42-05:00</p>
     </div>
   </div>
   
     
-    <div>
-    <div class="quarto-title-meta-heading">Doi</div>
-    <div class="quarto-title-meta-contents">
-      <p class="doi">
-        <a href="https://doi.org/10.5281/zenodo.6605061">10.5281/zenodo.6605061</a>
-      </p>
-    </div>
-  </div>
   </div>
   
 <div>
   <div class="abstract">
-    <div class="abstract-title">Abstract</div>
+    <div class="block-title">Abstract</div>
     <p>This study establishes proof-of-concept for a cardiomyopathy diagnostic algorithm using chromatin accessibility signatures at a sequencing depth achievable by benchtop instruments.</p>
   </div>
 </div>
 
-</header><div class="cell">
 
-</div>
-<p><br></p>
-<div class="cell">
-
-</div>
+</header><p><br></p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.time</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2022-09-25 14:01:49 CDT"</code></pre>
+<pre><code>[1] "2023-08-12 07:23:34 CDT"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -364,22 +337,20 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="functions" class="level3"><h3 class="anchored" data-anchor-id="functions">Functions</h3>
-<div class="cell">
-
-</div>
 <p>Load required packages.</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">## ── Attaching packages ────────────────────────────────── tidyverse 1.3.2.9000 ──</span></span>
-<span><span class="co">## ✔ ggplot2   3.3.6.9000        ✔ dplyr     1.0.99.9000  </span></span>
-<span><span class="co">## ✔ tibble    3.1.8.9002        ✔ stringr   1.4.1.9000   </span></span>
-<span><span class="co">## ✔ tidyr     1.2.1.9000        ✔ forcats   0.5.2.9000   </span></span>
-<span><span class="co">## ✔ readr     2.1.2.9000        ✔ lubridate 1.8.0.9000   </span></span>
-<span><span class="co">## ✔ purrr     0.9000.0.9000     </span></span>
+<span><span class="co">## ── Attaching core tidyverse packages ─────────────────── tidyverse 2.0.0.9000 ──</span></span>
+<span><span class="co">## ✔ dplyr     1.1.2.9000     ✔ readr     2.1.4.9000</span></span>
+<span><span class="co">## ✔ forcats   1.0.0.9000     ✔ stringr   1.5.0.9000</span></span>
+<span><span class="co">## ✔ ggplot2   3.4.2.9000     ✔ tibble    3.2.1.9005</span></span>
+<span><span class="co">## ✔ lubridate 1.9.2.9000     ✔ tidyr     1.3.0.9000</span></span>
+<span><span class="co">## ✔ purrr     1.0.2.9000     </span></span>
 <span><span class="co">## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
 <span><span class="co">## ✖ dplyr::filter() masks stats::filter()</span></span>
 <span><span class="co">## ✖ dplyr::lag()    masks stats::lag()</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://Matrix.R-forge.R-project.org/">Matrix</a></span><span class="op">)</span></span>
+<span><span class="co">## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://Matrix.R-forge.R-project.org">Matrix</a></span><span class="op">)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Attaching package: 'Matrix'</span></span>
 <span><span class="co">## </span></span>
@@ -401,36 +372,27 @@ gtag('config', 'G-DX6PCXFCKG', { 'anonymize_ip': true});
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">`%+replace%`</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">`%+replace%`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 </section><section id="python-env" class="level3"><h3 class="anchored" data-anchor-id="python-env">Python env</h3>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">np</span> <span class="op">&lt;-</span> <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/import.html">import</a></span><span class="op">(</span><span class="st">"numpy"</span>, convert <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"numpy version:"</span>, <span class="va">np</span><span class="op">$</span><span class="va">`__version__`</span>, <span class="st">"\n"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>numpy version: 1.22.4 </code></pre>
+<pre><code>numpy version: 1.24.3 </code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/py_config.html">py_config</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>python:         /Users/jialei/.pyenv/shims/python
-libpython:      /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/libpython3.9.dylib
-pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10:/Users/jialei/.pyenv/versions/mambaforge-4.10.3-10
-version:        3.9.13 | packaged by conda-forge | (main, May 27 2022, 17:00:33)  [Clang 13.0.1 ]
-numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
-numpy_version:  1.22.4
-numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
+libpython:      /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/libpython3.10.dylib
+pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3:/Users/jialei/.pyenv/versions/mambaforge-22.9.0-3
+version:        3.10.9 | packaged by conda-forge | (main, Feb  2 2023, 20:26:08) [Clang 14.0.6 ]
+numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
+numpy_version:  1.24.3
+numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
 
 NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 </div>
-</div>
-<div class="cell">
-
 </div>
 </section></section><section id="differentially-accessible-regions" class="level2"><h2 class="anchored" data-anchor-id="differentially-accessible-regions">Differentially accessible regions</h2>
 <div class="cell">
@@ -509,7 +471,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <div class="cell" data-hash="cardiomyopathy_cache/html/unnamed-chunk-19_c21a3197edc0a51461a068b109b760f4">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">samples_combn</span> <span class="op">&lt;-</span> <span class="fu">combinat</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/combinat/man/combn.html">combn</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">samples</span><span class="op">)</span>, m <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">diff_peaks</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">samples_combn</span><span class="op">)</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span><span class="va">diff_peaks</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">samples_combn</span><span class="op">)</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="va">sample_names_a</span> <span class="op">&lt;-</span> <span class="va">samples</span><span class="op">[[</span><span class="va">samples_combn</span><span class="op">[</span>, <span class="va">x</span><span class="op">]</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">]</span></span>
 <span>    <span class="va">sample_names_b</span> <span class="op">&lt;-</span> <span class="va">samples</span><span class="op">[[</span><span class="va">samples_combn</span><span class="op">[</span>, <span class="va">x</span><span class="op">]</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">]</span></span>
 <span></span>
@@ -833,23 +795,17 @@ low counts [2]     : 79885, 39%
 [1] see 'cooksCutoff' argument of ?results
 [2] see 'independentFiltering' argument of ?results</code></pre>
 </div>
-<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">diff_peaks</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">diff_peaks</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map_chr</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">samples_combn</span><span class="op">)</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">samples_combn</span><span class="op">[</span>, <span class="va">x</span><span class="op">]</span>, collapse <span class="op">=</span> <span class="st">"_vs_"</span><span class="op">)</span></span>
 <span>    <span class="op">}</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
 <div class="sourceCode" id="cb82"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">FC_THRESHOLD</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
 <span><span class="va">PADJ_THRESHOLD</span> <span class="op">&lt;-</span> <span class="fl">0.01</span></span>
 <span></span>
-<span><span class="va">features_selected</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">diff_peaks</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span><span class="va">features_selected</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="va">diff_peaks</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="va">x</span> <span class="op">|&gt;</span></span>
 <span>        <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>        <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span></span>
@@ -895,12 +851,12 @@ Attaching package: 'BiocGenerics'</code></pre>
 <div class="cell-output cell-output-stderr">
 <pre><code>The following objects are masked from 'package:base':
 
-    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
-    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
-    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
-    union, unique, unsplit, which.max, which.min</code></pre>
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
@@ -925,6 +881,11 @@ Attaching package: 'S4Vectors'</code></pre>
 <pre><code>The following object is masked from 'package:tidyr':
 
     expand</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:utils':
+
+    findMatches</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>The following objects are masked from 'package:base':
@@ -1024,23 +985,20 @@ Attaching package: 'Biobase'</code></pre>
 
     anyMissing, rowMedians</code></pre>
 </div>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">features_selected</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">features_selected</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5753</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># sanity check</span></span>
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># sanity check</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/stopifnot.html">stopifnot</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">features_selected</span><span class="op">)</span> <span class="op">==</span> <span class="fl">5753</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-
-</div>
 </section><section id="healthy-vs.-disease" class="level3"><h3 class="anchored" data-anchor-id="healthy-vs.-disease">Healthy vs.&nbsp;disease</h3>
 <div class="cell" data-hash="cardiomyopathy_cache/html/unnamed-chunk-25_58d9e1e91a97b4b9849eb0c4984d59f6">
-<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">&lt;-</span> <span class="fu">compute_diff_peaks</span><span class="op">(</span></span>
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">&lt;-</span> <span class="fu">compute_diff_peaks</span><span class="op">(</span></span>
 <span>    matrix <span class="op">=</span> <span class="va">matrix_readcount_use</span>,</span>
 <span>    group_a <span class="op">=</span> <span class="va">samples_fresh_healthy</span>,</span>
 <span>    group_b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
@@ -1067,13 +1025,10 @@ low counts [2]     : 0, 0%
 </div>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">FC_THRESHOLD</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">FC_THRESHOLD</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
 <span><span class="va">PADJ_THRESHOLD</span> <span class="op">&lt;-</span> <span class="fl">0.05</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Data</a></li>
@@ -1081,7 +1036,7 @@ low counts [2]     : 0, 0%
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/rownames.html">rownames_to_column</a></span><span class="op">(</span>var <span class="op">=</span> <span class="st">"feature"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
@@ -1175,7 +1130,7 @@ low counts [2]     : 0, 0%
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">diff_peaks</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/rownames.html">rownames_to_column</a></span><span class="op">(</span>var <span class="op">=</span> <span class="st">"feature"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
@@ -1224,10 +1179,10 @@ low counts [2]     : 0, 0%
 </div>
 </section><section id="heatmap" class="level3"><h3 class="anchored" data-anchor-id="heatmap">Heatmap</h3>
 <div class="cell">
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">RASTERISED</span> <span class="op">&lt;-</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">RASTERISED</span> <span class="op">&lt;-</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_cpm_use</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_cpm_use</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">matrix_readcount_use</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/colSums.html">colSums</a></span><span class="op">(</span><span class="va">matrix_readcount_use</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">*</span> <span class="fl">1e+06</span></span>
 <span></span>
@@ -1242,7 +1197,7 @@ low counts [2]     : 0, 0%
 <span><span class="va">matrix_heatmap</span><span class="op">[</span><span class="va">matrix_heatmap</span> <span class="op">&gt;</span> <span class="va">heatmap_limits</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">heatmap_limits</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hierarchical clustering</span></span>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hierarchical clustering</span></span>
 <span><span class="va">hclust_out_features</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/hclust.html">hclust</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/stats/dist.html">dist</a></span><span class="op">(</span><span class="va">matrix_heatmap</span>, method <span class="op">=</span> <span class="st">"euclidean"</span><span class="op">)</span>,</span>
 <span>    method <span class="op">=</span> <span class="st">"complete"</span></span>
@@ -1256,7 +1211,7 @@ low counts [2]     : 0, 0%
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>order <span class="op">=</span> <span class="va">hclust_out_features</span><span class="op">$</span><span class="va">order</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>hclust_group <span class="op">=</span> <span class="va">value</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">hclust_out_features_df</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">map2</a></span><span class="op">(</span></span>
+<span><span class="va">hclust_out_features_df</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map2.html">map2</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">NUM_CENTERS</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="va">hclust_out_features_df</span> <span class="op">|&gt;</span></span>
 <span>            <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">hclust_group</span> <span class="op">==</span> <span class="va">x</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1267,14 +1222,11 @@ low counts [2]     : 0, 0%
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap column annotation</span></span>
+<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap column annotation</span></span>
 <span><span class="va">ha_group</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">matrix_heatmap</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/enframe.html">enframe</a></span><span class="op">(</span>value <span class="op">=</span> <span class="st">"sample"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span></span>
-<span>        <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">samples</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>        <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">samples</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>            <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
 <span>                sample <span class="op">=</span> <span class="va">samples</span><span class="op">[[</span><span class="va">x</span><span class="op">]</span><span class="op">]</span>,</span>
 <span>                group <span class="op">=</span> <span class="va">x</span></span>
@@ -1312,7 +1264,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap row annotation</span></span>
+<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap row annotation</span></span>
 <span><span class="va">ha_region</span> <span class="op">&lt;-</span> <span class="va">hclust_out_features_df</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">group</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="op">{</span></span>
@@ -1342,7 +1294,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sample_ids</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sample_ids</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
 <span>    <span class="op">~</span><span class="va">sample_id</span>, <span class="op">~</span><span class="va">sample_id_publication</span>,</span>
 <span>    <span class="st">"F1_1"</span>, <span class="st">"C1_1"</span>,</span>
 <span>    <span class="st">"F1_2"</span>, <span class="st">"C1_2"</span>,</span>
@@ -1403,7 +1355,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap</span></span>
+<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># heatmap</span></span>
 <span><span class="va">ht</span> <span class="op">&lt;-</span> <span class="fu">ComplexHeatmap</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ComplexHeatmap/man/Heatmap.html">Heatmap</a></span><span class="op">(</span></span>
 <span>    matrix <span class="op">=</span> <span class="va">matrix_heatmap</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>    rect_gp <span class="op">=</span> <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/gpar.html">gpar</a></span><span class="op">(</span>col <span class="op">=</span> <span class="cn">NA</span>, lwd <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
@@ -1463,7 +1415,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># legend</span></span>
+<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># legend</span></span>
 <span><span class="va">lgd_group</span> <span class="op">&lt;-</span> <span class="fu">ComplexHeatmap</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ComplexHeatmap/man/Legend.html">Legend</a></span><span class="op">(</span></span>
 <span>    title <span class="op">=</span> <span class="st">"Group"</span>,</span>
 <span>    labels <span class="op">=</span> <span class="va">ha_group</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -1491,7 +1443,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># draw</span></span>
+<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># draw</span></span>
 <span><span class="fu">ComplexHeatmap</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ComplexHeatmap/man/draw-dispatch.html">draw</a></span><span class="op">(</span></span>
 <span>    <span class="va">ht</span>,</span>
 <span>    heatmap_legend_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">pd</span><span class="op">)</span></span>
@@ -1504,7 +1456,7 @@ low counts [2]     : 0, 0%
 </div>
 </div>
 </section></section><section id="go-enrichment" class="level2"><h2 class="anchored" data-anchor-id="go-enrichment">GO enrichment</h2>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Plot</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Data</a></li>
@@ -1512,7 +1464,7 @@ low counts [2]     : 0, 0%
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="cell" data-layout-align="center" data-fig.format="svg">
-<details><summary>Code</summary><div class="sourceCode" id="cb135"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enriched_go</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb136"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enriched_go</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>        category <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span></span>
 <span>            <span class="va">category</span>,</span>
@@ -1610,9 +1562,9 @@ low counts [2]     : 0, 0%
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="cell">
-<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enriched_go</span> <span class="op">|&gt;</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enriched_go</span> <span class="op">|&gt;</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 4%">
@@ -1767,7 +1719,7 @@ low counts [2]     : 0, 0%
 </div>
 </section><section id="embedding" class="level2"><h2 class="anchored" data-anchor-id="embedding">Embedding</h2>
 <div class="cell">
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">SEED</span> <span class="op">&lt;-</span> <span class="fl">20220408</span></span>
+<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">SEED</span> <span class="op">&lt;-</span> <span class="fl">20220408</span></span>
 <span></span>
 <span><span class="va">color_palette_group</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/setNames.html">setNames</a></span><span class="op">(</span></span>
 <span>    object <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="fu">yarrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/yarrr/man/piratepal.html">piratepal</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"google"</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -1779,7 +1731,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span> <span class="op">*</span> <span class="fl">1e+06</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">embedding</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">embedding</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">matrix_cpm_use</span><span class="op">)</span>, <span class="va">features_selected</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="va">matrix_umap</span> <span class="op">&lt;-</span> <span class="va">matrix_cpm_use</span><span class="op">[</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">samples</span><span class="op">)</span><span class="op">]</span></span>
 <span>        <span class="va">matrix_umap</span> <span class="op">&lt;-</span> <span class="va">matrix_umap</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/colSums.html">rowSums</a></span><span class="op">(</span><span class="va">matrix_umap</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="fl">30</span>, <span class="op">]</span></span>
@@ -1801,7 +1753,7 @@ low counts [2]     : 0, 0%
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">}</span></span>
 <span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce</a></span><span class="op">(</span><span class="va">cbind</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/reduce.html">reduce</a></span><span class="op">(</span><span class="va">cbind</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/rownames.html">rownames_to_column</a></span><span class="op">(</span>var <span class="op">=</span> <span class="st">"sample"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span></span>
@@ -1823,33 +1775,33 @@ low counts [2]     : 0, 0%
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>14:02:06 UMAP embedding parameters a = 1.896 b = 0.8006</code></pre>
+<pre><code>07:24:11 UMAP embedding parameters a = 1.896 b = 0.8006</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>14:02:06 Read 42 rows and found 205154 numeric columns</code></pre>
+<pre><code>07:24:11 Read 42 rows and found 205154 numeric columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>14:02:06 Using FNN for neighbor search, n_neighbors = 10</code></pre>
+<pre><code>07:24:11 Using FNN for neighbor search, n_neighbors = 10</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>14:02:07 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
-14:02:07 Initializing from normalized Laplacian + noise (using irlba)
-14:02:07 Commencing optimization for 500 epochs, with 552 positive edges
-14:02:08 Optimization finished
-14:02:08 UMAP embedding parameters a = 1.896 b = 0.8006
-14:02:08 Read 42 rows and found 5751 numeric columns
-14:02:08 Using FNN for neighbor search, n_neighbors = 10
-14:02:08 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
-14:02:09 Initializing from normalized Laplacian + noise (using irlba)
-14:02:09 Commencing optimization for 500 epochs, with 416 positive edges
-14:02:09 Optimization finished</code></pre>
+<pre><code>07:24:12 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
+07:24:13 Initializing from normalized Laplacian + noise (using irlba)
+07:24:13 Commencing optimization for 500 epochs, with 552 positive edges
+07:24:13 Optimization finished
+07:24:13 UMAP embedding parameters a = 1.896 b = 0.8006
+07:24:13 Read 42 rows and found 5751 numeric columns
+07:24:13 Using FNN for neighbor search, n_neighbors = 10
+07:24:14 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 10
+07:24:14 Initializing from normalized Laplacian + noise (using irlba)
+07:24:14 Commencing optimization for 500 epochs, with 416 positive edges
+07:24:14 Optimization finished</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">GEOM_POINT_SIZE</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
+<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">GEOM_POINT_SIZE</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
 <span><span class="va">EMBEDDING_TITLE_PREFIX</span> <span class="op">&lt;-</span> <span class="st">"UMAP"</span></span>
 <span></span>
-<span><span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">map2</a></span><span class="op">(</span></span>
+<span><span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map2.html">map2</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"2"</span><span class="op">)</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">matrix_cpm_use</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">features_selected</span><span class="op">)</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu">plot_embedding</span><span class="op">(</span></span>
@@ -1869,7 +1821,7 @@ low counts [2]     : 0, 0%
 <span>            <span class="fu">theme_customized_embedding</span><span class="op">(</span><span class="op">)</span></span>
 <span>    <span class="op">}</span></span>
 <span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce</a></span><span class="op">(</span><span class="va">`+`</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/reduce.html">reduce</a></span><span class="op">(</span><span class="va">`+`</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_layout.html">plot_layout</a></span><span class="op">(</span>ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_annotation.html">plot_annotation</a></span><span class="op">(</span></span>
 <span>        theme <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.margin <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
@@ -1883,16 +1835,13 @@ low counts [2]     : 0, 0%
 </div>
 </section><section id="prediction" class="level2"><h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
 <div class="cell">
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">N_REPLICATES</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">N_REPLICATES</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
 <span><span class="va">N_SAMPLES_TEST</span> <span class="op">&lt;-</span> <span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="auc-multiple" class="level3"><h3 class="anchored" data-anchor-id="auc-multiple">AUC; multiple</h3>
-<div class="cell">
-
-</div>
 <section id="m" class="level4"><h4 class="anchored" data-anchor-id="m">76 M</h4>
 <div class="cell">
-<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_rf_core_set</span> <span class="op">&lt;-</span> <span class="va">matrix_cpm_use</span><span class="op">[</span></span>
+<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_rf_core_set</span> <span class="op">&lt;-</span> <span class="va">matrix_cpm_use</span><span class="op">[</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">matrix_cpm_use</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">features_selected</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">samples</span><span class="op">)</span></span>
 <span><span class="op">]</span> <span class="op">|&gt;</span></span>
@@ -1924,13 +1873,10 @@ low counts [2]     : 0, 0%
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">matrix_rf_core_set</span><span class="op">)</span> <span class="op">==</span> <span class="st">"data.frame"</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-
-</div>
 <div class="cell" data-hash="cardiomyopathy_cache/html/unnamed-chunk-50_c0562b58a282e7cb4600adc61154dd0d">
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="co"># roc_data &lt;- furrr::future_map(seq_len(N_REPLICATES), \(x) {</span></span>
-<span>    <span class="va">samples_test</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">samples</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">samples_test</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="va">samples</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span></span>
 <span>            <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove</a></span><span class="op">(</span></span>
 <span>                string <span class="op">=</span> <span class="va">x</span>,</span>
@@ -1980,15 +1926,12 @@ low counts [2]     : 0, 0%
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">roc_data</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">format_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">format_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span>
 <span><span class="va">roc_averaged</span> <span class="op">&lt;-</span> <span class="fu">average_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="m-1" class="level4"><h4 class="anchored" data-anchor-id="m-1">20 M</h4>
 <div class="cell">
-<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">library_size</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">library_size</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
 <span>    <span class="op">~</span><span class="va">sample</span>, <span class="op">~</span><span class="va">num_reads</span>,</span>
 <span>    <span class="st">"F1_1"</span>, <span class="fl">60964390</span>,</span>
 <span>    <span class="st">"F1_2"</span>, <span class="fl">57968864</span>,</span>
@@ -2040,12 +1983,12 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">TARGET_NUM_READS</span> <span class="op">&lt;-</span> <span class="fl">20000000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">TARGET_NUM_READS</span> <span class="op">&lt;-</span> <span class="fl">20000000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="cardiomyopathy_cache/html/unnamed-chunk-55_e58f92acd25524293ed24894d57e0920">
-<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="co"># roc_data &lt;- furrr::future_map(seq_len(N_REPLICATES), \(x) {</span></span>
-<span>    <span class="va">samples_test</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">samples</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">samples_test</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="va">samples</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span></span>
 <span>            <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove</a></span><span class="op">(</span></span>
 <span>                string <span class="op">=</span> <span class="va">x</span>,</span>
@@ -2132,17 +2075,11 @@ low counts [2]     : 0, 0%
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">roc_data</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">N_REPLICATES</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">format_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_data</span> <span class="op">&lt;-</span> <span class="fu">format_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span>
 <span><span class="va">roc_averaged_downsampled</span> <span class="op">&lt;-</span> <span class="fu">average_roc</span><span class="op">(</span>roc_data <span class="op">=</span> <span class="va">roc_data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-
-</div>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">plot_roc_curve_two</span><span class="op">(</span></span>
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">plot_roc_curve_two</span><span class="op">(</span></span>
 <span>    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">roc_averaged</span>, <span class="va">roc_averaged_downsampled</span><span class="op">)</span>,</span>
 <span>    label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"76 M"</span>, <span class="st">"20 M"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2153,16 +2090,10 @@ low counts [2]     : 0, 0%
 </div>
 </div>
 </div>
-<div class="cell">
-
-</div>
 </section></section><section id="construct-model" class="level3"><h3 class="anchored" data-anchor-id="construct-model">Construct model</h3>
-<div class="cell">
-
-</div>
 <section id="build" class="level4"><h4 class="anchored" data-anchor-id="build">Build</h4>
 <div class="cell">
-<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_rf_train</span> <span class="op">&lt;-</span> <span class="va">matrix_cpm_use</span><span class="op">[</span></span>
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">matrix_rf_train</span> <span class="op">&lt;-</span> <span class="va">matrix_cpm_use</span><span class="op">[</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">matrix_cpm_use</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">features_selected</span>,</span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>        <span class="va">samples_fresh_healthy</span>,</span>
@@ -2200,7 +2131,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span>seed <span class="op">=</span> <span class="va">SEED</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span>seed <span class="op">=</span> <span class="va">SEED</span><span class="op">)</span></span>
 <span><span class="va">rf_model</span> <span class="op">&lt;-</span> <span class="fu">randomForest</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span><span class="op">(</span></span>
 <span>    <span class="va">group</span> <span class="op">~</span> <span class="va">.</span>,</span>
 <span>    data <span class="op">=</span> <span class="va">matrix_rf_train</span><span class="op">[</span></span>
@@ -2212,7 +2143,7 @@ low counts [2]     : 0, 0%
 </div>
 </section><section id="predict" class="level4"><h4 class="anchored" data-anchor-id="predict">Predict</h4>
 <div class="cell">
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">samples_selected</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">samples_selected</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
 <span>    <span class="op">~</span><span class="va">sample</span>, <span class="op">~</span><span class="va">ratio</span>,</span>
 <span>    <span class="st">"P97a_1"</span>, <span class="fl">0.3677451197</span>,</span>
 <span>    <span class="st">"P97a_2"</span>, <span class="fl">0.396041047</span>,</span>
@@ -2228,7 +2159,7 @@ low counts [2]     : 0, 0%
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F1_1"</span>, <span class="st">"P92a_1"</span>, <span class="st">"P59a_1"</span>, <span class="st">"HOCM4_1"</span><span class="op">)</span></span>
 <span><span class="op">]</span></span>
 <span></span>
-<span><span class="va">matrix_readcount_p2</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span></span>
+<span><span class="va">matrix_readcount_p2</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">samples_selected</span><span class="op">)</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu">downsample_matrix</span><span class="op">(</span></span>
 <span>            <span class="va">matrix_readcount_use</span><span class="op">[</span></span>
@@ -2239,7 +2170,7 @@ low counts [2]     : 0, 0%
 <span>        <span class="op">)</span></span>
 <span>    <span class="op">}</span></span>
 <span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce</a></span><span class="op">(</span><span class="va">cbind</span><span class="op">)</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/reduce.html">reduce</a></span><span class="op">(</span><span class="va">cbind</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">matrix_rf_test</span> <span class="op">&lt;-</span> <span class="fu">calc_cpm</span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span></span>
@@ -2265,10 +2196,7 @@ low counts [2]     : 0, 0%
 </section><section id="visualize" class="level4"><h4 class="anchored" data-anchor-id="visualize">Visualize</h4>
 <section id="heatmap-1" class="level5"><h5 class="anchored" data-anchor-id="heatmap-1">Heatmap</h5>
 <div class="cell">
-
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># horizontal</span></span>
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># horizontal</span></span>
 <span><span class="va">ht</span> <span class="op">&lt;-</span> <span class="fu">ComplexHeatmap</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ComplexHeatmap/man/Heatmap.html">Heatmap</a></span><span class="op">(</span></span>
 <span>    matrix <span class="op">=</span> <span class="va">matrix_heatmap</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>    col <span class="op">=</span> <span class="fu">wesanderson</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/wesanderson/man/wes_palette.html">wes_palette</a></span><span class="op">(</span><span class="st">"Zissou1"</span>, <span class="fl">50</span>, type <span class="op">=</span> <span class="st">"continuous"</span><span class="op">)</span>,</span>
@@ -2306,7 +2234,7 @@ low counts [2]     : 0, 0%
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># draw</span></span>
+<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># draw</span></span>
 <span><span class="fu">ComplexHeatmap</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ComplexHeatmap/man/draw-dispatch.html">draw</a></span><span class="op">(</span><span class="va">ht</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2315,18 +2243,9 @@ low counts [2]     : 0, 0%
 </div>
 </div>
 </div>
-<div class="cell">
-
-</div>
 </section><section id="radar-plot" class="level5"><h5 class="anchored" data-anchor-id="radar-plot">Radar plot</h5>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">matrix_heatmap</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/map.html">map</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">matrix_heatmap</span><span class="op">)</span>, \<span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="va">data</span> <span class="op">&lt;-</span> <span class="va">matrix_heatmap</span><span class="op">[</span></span>
 <span>        <span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"HCM     "</span>, <span class="st">"Healthy"</span>, <span class="st">"     ICM"</span>, <span class="st">"NICM"</span><span class="op">)</span>,</span>
 <span>        drop <span class="op">=</span> <span class="cn">FALSE</span></span>
@@ -2335,7 +2254,7 @@ low counts [2]     : 0, 0%
 <span></span>
 <span>    <span class="fu">plot_radar</span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce</a></span><span class="op">(</span><span class="va">`+`</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/purrr/man/reduce.html">reduce</a></span><span class="op">(</span><span class="va">`+`</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_layout.html">plot_layout</a></span><span class="op">(</span>ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2346,187 +2265,166 @@ low counts [2]     : 0, 0%
 </div>
 </section></section></section></section><section id="r-session-info" class="level2"><h2 class="anchored" data-anchor-id="r-session-info">R session info</h2>
 <div class="cell">
-<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.1 (2022-06-23)
- os       macOS Monterey 12.6
- system   aarch64, darwin21.6.0
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin22.4.0
  ui       unknown
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2022-09-25
- pandoc   2.19.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2023-08-12
+ pandoc   2.19.2 @ /Users/jialei/.pyenv/shims/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package              * version       date (UTC) lib source
- annotate               1.74.0        2022-04-26 [1] Bioconductor
- AnnotationDbi          1.58.0        2022-04-26 [1] Bioconductor
- BayesFactor            0.9.12-4.4    2022-07-05 [1] CRAN (R 4.2.1)
- beeswarm               0.4.0         2021-06-01 [1] CRAN (R 4.2.0)
- Biobase              * 2.56.0        2022-04-26 [1] Bioconductor
- BiocGenerics         * 0.42.0        2022-04-26 [1] Bioconductor
- BiocParallel           1.30.3        2022-06-05 [1] Bioconductor
- Biostrings             2.64.1        2022-08-18 [1] Bioconductor
- bit                    4.0.4         2020-08-04 [1] CRAN (R 4.2.0)
- bit64                  4.0.5         2020-08-30 [1] CRAN (R 4.2.0)
- bitops                 1.0-7         2021-04-24 [1] CRAN (R 4.2.0)
- blob                   1.2.3         2022-04-10 [1] CRAN (R 4.2.0)
- cachem                 1.0.6         2021-08-19 [1] CRAN (R 4.2.0)
- Cairo                  1.6-0         2022-07-05 [1] CRAN (R 4.2.1)
- callr                  3.7.2         2022-08-22 [1] CRAN (R 4.2.1)
- circlize               0.4.15        2022-05-10 [1] CRAN (R 4.2.0)
- cli                    3.4.1         2022-09-23 [1] CRAN (R 4.2.1)
- clue                   0.3-61        2022-05-30 [1] CRAN (R 4.2.0)
- cluster                2.1.4         2022-08-22 [2] CRAN (R 4.2.1)
- coda                   0.19-4        2020-09-30 [1] CRAN (R 4.2.0)
- codetools              0.2-18        2020-11-04 [2] CRAN (R 4.2.1)
- colorspace             2.0-3         2022-02-21 [1] CRAN (R 4.2.0)
- ComplexHeatmap         2.12.1        2022-08-09 [1] Bioconductor
- crayon                 1.5.1         2022-03-26 [1] CRAN (R 4.2.0)
- DBI                    1.1.3         2022-06-18 [1] CRAN (R 4.2.0)
- DelayedArray           0.22.0        2022-04-26 [1] Bioconductor
- DESeq2               * 1.36.0        2022-04-26 [1] Bioconductor
- devtools               2.4.4.9000    2022-09-23 [1] Github (r-lib/devtools@9e2793a)
- digest                 0.6.29        2021-12-01 [1] CRAN (R 4.2.0)
- doParallel             1.0.17        2022-02-07 [1] CRAN (R 4.2.0)
- dplyr                * 1.0.99.9000   2022-09-23 [1] Github (tidyverse/dplyr@19c2be3)
- ellipsis               0.3.2         2021-04-29 [1] CRAN (R 4.2.0)
- evaluate               0.16          2022-08-09 [1] CRAN (R 4.2.1)
- extrafont            * 0.18          2022-04-12 [1] CRAN (R 4.2.0)
- extrafontdb            1.0           2012-06-11 [1] CRAN (R 4.2.0)
- fansi                  1.0.3         2022-03-24 [1] CRAN (R 4.2.0)
- farver                 2.1.1         2022-07-06 [1] CRAN (R 4.2.1)
- fastmap                1.1.0         2021-01-25 [1] CRAN (R 4.2.0)
- FNN                    1.1.3.1       2022-05-23 [1] CRAN (R 4.2.0)
- forcats              * 0.5.2.9000    2022-08-20 [1] Github (tidyverse/forcats@bd319e0)
- foreach                1.5.2         2022-02-02 [1] CRAN (R 4.2.0)
- fs                     1.5.2.9000    2022-08-24 [1] Github (r-lib/fs@238032f)
- genefilter             1.78.0        2022-04-26 [1] Bioconductor
- geneplotter            1.74.0        2022-04-26 [1] Bioconductor
- generics               0.1.3         2022-07-05 [1] CRAN (R 4.2.1)
- GenomeInfoDb         * 1.32.4        2022-09-06 [1] Bioconductor
- GenomeInfoDbData       1.2.8         2022-04-22 [1] Bioconductor
- GenomicRanges        * 1.48.0        2022-04-26 [1] Bioconductor
- GetoptLong             1.0.5         2020-12-15 [1] CRAN (R 4.2.0)
- ggbeeswarm             0.6.0         2017-08-07 [1] CRAN (R 4.2.0)
- ggplot2              * 3.3.6.9000    2022-09-12 [1] Github (tidyverse/ggplot2@a58b48c)
- ggrastr                1.0.1         2022-09-12 [1] Github (VPetukhov/ggrastr@7aed9af)
- GlobalOptions          0.1.2         2020-06-10 [1] CRAN (R 4.2.0)
- glue                   1.6.2.9000    2022-04-22 [1] Github (tidyverse/glue@d47d6c7)
- gtable                 0.3.1.9000    2022-09-01 [1] Github (r-lib/gtable@c1a7a81)
- highr                  0.9           2021-04-16 [1] CRAN (R 4.2.0)
- hms                    1.1.2         2022-08-19 [1] CRAN (R 4.2.1)
- htmltools              0.5.3         2022-07-18 [1] CRAN (R 4.2.1)
- htmlwidgets            1.5.4         2022-08-23 [1] Github (ramnathv/htmlwidgets@400cf1a)
- httpuv                 1.6.6         2022-09-08 [1] CRAN (R 4.2.1)
- httr                   1.4.4         2022-08-17 [1] CRAN (R 4.2.1)
- IRanges              * 2.30.1        2022-08-18 [1] Bioconductor
- irlba                  2.3.5         2021-12-06 [1] CRAN (R 4.2.1)
- isoband                0.2.5         2021-07-13 [1] CRAN (R 4.2.0)
- iterators              1.0.14        2022-02-05 [1] CRAN (R 4.2.0)
- jpeg                   0.1-9         2021-07-24 [1] CRAN (R 4.2.0)
- jsonlite               1.8.0         2022-02-22 [1] CRAN (R 4.2.0)
- KEGGREST               1.36.3        2022-07-12 [1] Bioconductor
- knitr                  1.40          2022-08-24 [1] CRAN (R 4.2.1)
- labeling               0.4.2         2020-10-20 [1] CRAN (R 4.2.0)
- later                  1.3.0         2021-08-18 [1] CRAN (R 4.2.0)
- lattice                0.20-45       2021-09-22 [2] CRAN (R 4.2.1)
- lifecycle              1.0.2.9000    2022-09-23 [1] Github (r-lib/lifecycle@0a6860a)
- locfit                 1.5-9.6       2022-07-11 [1] CRAN (R 4.2.1)
- lubridate            * 1.8.0.9000    2022-05-24 [1] Github (tidyverse/lubridate@0bb49b2)
- magick                 2.7.3         2021-08-18 [1] CRAN (R 4.2.0)
- magrittr               2.0.3         2022-03-30 [1] CRAN (R 4.2.0)
- MASS                   7.3-58.1      2022-08-03 [2] CRAN (R 4.2.1)
- Matrix               * 1.5-1         2022-09-13 [1] CRAN (R 4.2.1)
- MatrixGenerics       * 1.8.1         2022-06-26 [1] Bioconductor
- MatrixModels           0.5-1         2022-09-11 [1] CRAN (R 4.2.1)
- matrixStats          * 0.62.0        2022-04-19 [1] CRAN (R 4.2.0)
- memoise                2.0.1         2021-11-26 [1] CRAN (R 4.2.0)
- mime                   0.12          2021-09-28 [1] CRAN (R 4.2.0)
- miniUI                 0.1.1.1       2018-05-18 [1] CRAN (R 4.2.0)
- munsell                0.5.0         2018-06-12 [1] CRAN (R 4.2.0)
- mvtnorm                1.1-3         2021-10-08 [1] CRAN (R 4.2.1)
- patchwork            * 1.1.2.9000    2022-08-20 [1] Github (thomasp85/patchwork@c14c960)
- pbapply                1.5-0         2021-09-16 [1] CRAN (R 4.2.0)
- pillar                 1.8.1         2022-08-19 [1] CRAN (R 4.2.1)
- pkgbuild               1.3.1         2021-12-20 [1] CRAN (R 4.2.0)
- pkgconfig              2.0.3         2019-09-22 [1] CRAN (R 4.2.0)
- pkgload                1.3.0         2022-06-27 [1] CRAN (R 4.2.1)
- plyr                   1.8.7         2022-03-24 [1] CRAN (R 4.2.0)
- png                    0.1-7         2013-12-03 [1] CRAN (R 4.2.0)
- prettyunits            1.1.1.9000    2022-04-22 [1] Github (r-lib/prettyunits@8706d89)
- pROC                   1.18.0        2021-09-03 [1] CRAN (R 4.2.0)
- processx               3.7.0         2022-07-07 [1] CRAN (R 4.2.1)
- profvis                0.3.7         2020-11-02 [1] CRAN (R 4.2.0)
- promises               1.2.0.1       2021-02-11 [1] CRAN (R 4.2.0)
- ps                     1.7.1         2022-06-18 [1] CRAN (R 4.2.0)
- purrr                * 0.9000.0.9000 2022-09-24 [1] Github (tidyverse/purrr@4ab13f5)
- R.cache                0.16.0        2022-07-21 [1] CRAN (R 4.2.1)
- R.methodsS3            1.8.2         2022-06-13 [1] CRAN (R 4.2.0)
- R.oo                   1.25.0        2022-06-12 [1] CRAN (R 4.2.0)
- R.utils                2.12.0        2022-06-28 [1] CRAN (R 4.2.1)
- R6                     2.5.1.9000    2022-08-04 [1] Github (r-lib/R6@87d5e45)
- ragg                   1.2.2.9000    2022-09-12 [1] Github (r-lib/ragg@904e145)
- randomForest           4.7-1.1       2022-05-23 [1] CRAN (R 4.2.1)
- RColorBrewer           1.1-3         2022-04-03 [1] CRAN (R 4.2.0)
- Rcpp                   1.0.9         2022-07-08 [1] CRAN (R 4.2.1)
- RCurl                  1.98-1.8      2022-07-30 [1] CRAN (R 4.2.1)
- readr                * 2.1.2.9000    2022-09-20 [1] Github (tidyverse/readr@5cac6ed)
- remotes                2.4.2         2022-09-12 [1] Github (r-lib/remotes@bc0949d)
- reticulate             1.26          2022-08-31 [1] CRAN (R 4.2.1)
- rjson                  0.2.21        2022-01-09 [1] CRAN (R 4.2.0)
- rlang                  1.0.6         2022-09-24 [1] Github (r-lib/rlang@66454bd)
- rmarkdown              2.16.1        2022-09-24 [1] Github (rstudio/rmarkdown@9577707)
- RSQLite                2.2.17        2022-09-10 [1] CRAN (R 4.2.1)
- Rttf2pt1               1.3.10        2022-02-07 [1] CRAN (R 4.2.0)
- S4Vectors            * 0.34.0        2022-04-26 [1] Bioconductor
- scales                 1.2.1.9000    2022-08-20 [1] Github (r-lib/scales@b3df2fb)
- sessioninfo            1.2.2         2021-12-06 [1] CRAN (R 4.2.0)
- shape                  1.4.6         2021-05-19 [1] CRAN (R 4.2.0)
- shiny                  1.7.2         2022-07-19 [1] CRAN (R 4.2.1)
- stringi                1.7.8         2022-07-11 [1] CRAN (R 4.2.1)
- stringr              * 1.4.1.9000    2022-08-21 [1] Github (tidyverse/stringr@792bc92)
- styler               * 1.7.0.9002    2022-09-21 [1] Github (r-lib/styler@1f4437b)
- SummarizedExperiment * 1.26.1        2022-04-29 [1] Bioconductor
- survival               3.4-0         2022-08-09 [2] CRAN (R 4.2.1)
- systemfonts            1.0.4         2022-02-11 [1] CRAN (R 4.2.0)
- textshaping            0.3.6         2021-10-13 [1] CRAN (R 4.2.0)
- tibble               * 3.1.8.9002    2022-09-24 [1] Github (tidyverse/tibble@e9db4f4)
- tidyr                * 1.2.1.9000    2022-09-09 [1] Github (tidyverse/tidyr@653def2)
- tidyselect             1.1.2.9000    2022-09-21 [1] Github (r-lib/tidyselect@edd0a3b)
- tidyverse            * 1.3.2.9000    2022-09-12 [1] Github (tidyverse/tidyverse@3be8283)
- tzdb                   0.3.0         2022-03-28 [1] CRAN (R 4.2.0)
- urlchecker             1.0.1         2021-11-30 [1] CRAN (R 4.2.0)
- usethis                2.1.6.9000    2022-09-23 [1] Github (r-lib/usethis@8ecb7ab)
- utf8                   1.2.2         2021-07-24 [1] CRAN (R 4.2.0)
- uwot                   0.1.14        2022-09-12 [1] Github (jlmelville/uwot@e739069)
- vctrs                  0.4.1.9000    2022-09-19 [1] Github (r-lib/vctrs@0a219ba)
- vipor                  0.4.5         2017-03-22 [1] CRAN (R 4.2.0)
- wesanderson            0.3.6.9000    2022-04-22 [1] Github (karthik/wesanderson@2796b59)
- withr                  2.5.0         2022-03-03 [1] CRAN (R 4.2.0)
- xfun                   0.33          2022-09-12 [1] CRAN (R 4.2.1)
- XML                    3.99-0.10     2022-06-09 [1] CRAN (R 4.2.0)
- xtable                 1.8-4         2019-04-21 [1] CRAN (R 4.2.0)
- XVector                0.36.0        2022-04-26 [1] Bioconductor
- yaml                   2.3.5         2022-02-21 [1] CRAN (R 4.2.0)
- yarrr                  0.1.6         2022-04-22 [1] Github (ndphillips/yarrr@e2e4488)
- zlibbioc               1.42.0        2022-04-26 [1] Bioconductor
+ package              * version     date (UTC) lib source
+ abind                  1.4-5       2016-07-21 [1] CRAN (R 4.3.0)
+ BayesFactor            0.9.12-4.4  2022-07-05 [1] CRAN (R 4.3.0)
+ beeswarm               0.4.0       2021-06-01 [1] CRAN (R 4.3.0)
+ Biobase              * 2.60.0      2023-04-25 [1] Bioconductor
+ BiocGenerics         * 0.46.0      2023-04-25 [1] Bioconductor
+ BiocParallel           1.34.2      2023-05-22 [1] Bioconductor
+ bitops                 1.0-7       2021-04-24 [1] CRAN (R 4.3.0)
+ cachem                 1.0.8       2023-05-01 [1] CRAN (R 4.3.0)
+ callr                  3.7.3       2022-11-02 [1] CRAN (R 4.3.0)
+ circlize               0.4.15      2022-05-10 [1] CRAN (R 4.3.0)
+ cli                    3.6.1       2023-03-23 [1] CRAN (R 4.3.0)
+ clue                   0.3-64      2023-01-31 [1] CRAN (R 4.3.0)
+ cluster                2.1.4       2022-08-22 [2] CRAN (R 4.3.1)
+ coda                   0.19-4      2020-09-30 [1] CRAN (R 4.3.0)
+ codetools              0.2-19      2023-02-01 [2] CRAN (R 4.3.1)
+ colorspace             2.1-0       2023-01-23 [1] CRAN (R 4.3.0)
+ ComplexHeatmap         2.16.0      2023-04-25 [1] Bioconductor
+ crayon                 1.5.2       2022-09-29 [1] CRAN (R 4.3.0)
+ DelayedArray           0.26.7      2023-07-28 [1] Bioconductor
+ DESeq2               * 1.40.2      2023-06-23 [1] Bioconductor
+ devtools               2.4.5.9000  2023-08-11 [1] Github (r-lib/devtools@163c3f2)
+ digest                 0.6.33      2023-07-07 [1] CRAN (R 4.3.1)
+ doParallel             1.0.17      2022-02-07 [1] CRAN (R 4.3.0)
+ dplyr                * 1.1.2.9000  2023-07-19 [1] Github (tidyverse/dplyr@c963d4d)
+ ellipsis               0.3.2       2021-04-29 [1] CRAN (R 4.3.0)
+ evaluate               0.21        2023-05-05 [1] CRAN (R 4.3.0)
+ extrafont            * 0.19        2023-01-18 [1] CRAN (R 4.3.0)
+ extrafontdb            1.0         2012-06-11 [1] CRAN (R 4.3.0)
+ fansi                  1.0.4       2023-01-22 [1] CRAN (R 4.3.0)
+ farver                 2.1.1       2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap                1.1.1       2023-02-24 [1] CRAN (R 4.3.0)
+ FNN                    1.1.3.2     2023-03-20 [1] CRAN (R 4.3.0)
+ forcats              * 1.0.0.9000  2023-04-23 [1] Github (tidyverse/forcats@4a8525a)
+ foreach                1.5.2       2022-02-02 [1] CRAN (R 4.3.0)
+ fs                     1.6.3       2023-07-20 [1] CRAN (R 4.3.1)
+ generics               0.1.3       2022-07-05 [1] CRAN (R 4.3.0)
+ GenomeInfoDb         * 1.36.1      2023-06-21 [1] Bioconductor
+ GenomeInfoDbData       1.2.10      2023-04-23 [1] Bioconductor
+ GenomicRanges        * 1.52.0      2023-04-25 [1] Bioconductor
+ GetoptLong             1.0.5       2020-12-15 [1] CRAN (R 4.3.0)
+ ggbeeswarm             0.7.2       2023-04-29 [1] CRAN (R 4.3.0)
+ ggplot2              * 3.4.2.9000  2023-08-11 [1] Github (tidyverse/ggplot2@2cd0e96)
+ ggrastr                1.0.2       2023-06-01 [1] CRAN (R 4.3.0)
+ GlobalOptions          0.1.2       2020-06-10 [1] CRAN (R 4.3.0)
+ glue                   1.6.2.9000  2023-04-23 [1] Github (tidyverse/glue@cbac82a)
+ gtable                 0.3.3.9000  2023-04-23 [1] Github (r-lib/gtable@c56fd4f)
+ hms                    1.1.3       2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools              0.5.6       2023-08-10 [1] CRAN (R 4.3.1)
+ htmlwidgets            1.6.2       2023-03-17 [1] CRAN (R 4.3.0)
+ IRanges              * 2.34.1      2023-06-22 [1] Bioconductor
+ irlba                  2.3.5.1     2022-10-03 [1] CRAN (R 4.3.0)
+ isoband                0.2.7       2022-12-20 [1] CRAN (R 4.3.0)
+ iterators              1.0.14      2022-02-05 [1] CRAN (R 4.3.0)
+ jpeg                   0.1-10      2022-11-29 [1] CRAN (R 4.3.0)
+ jsonlite               1.8.7       2023-06-29 [1] CRAN (R 4.3.1)
+ knitr                  1.43        2023-05-25 [1] CRAN (R 4.3.0)
+ labeling               0.4.2       2020-10-20 [1] CRAN (R 4.3.0)
+ lattice                0.21-8      2023-04-05 [2] CRAN (R 4.3.1)
+ lifecycle              1.0.3       2022-10-07 [1] CRAN (R 4.3.0)
+ locfit                 1.5-9.8     2023-06-11 [1] CRAN (R 4.3.0)
+ lubridate            * 1.9.2.9000  2023-07-22 [1] Github (tidyverse/lubridate@cae67ea)
+ magick                 2.7.5       2023-08-07 [1] CRAN (R 4.3.1)
+ magrittr               2.0.3       2022-03-30 [1] CRAN (R 4.3.0)
+ MASS                   7.3-60      2023-05-04 [2] CRAN (R 4.3.1)
+ Matrix               * 1.6-0       2023-07-08 [2] CRAN (R 4.3.1)
+ MatrixGenerics       * 1.12.3      2023-07-30 [1] Bioconductor
+ MatrixModels           0.5-2       2023-07-10 [1] CRAN (R 4.3.1)
+ matrixStats          * 1.0.0       2023-06-02 [1] CRAN (R 4.3.0)
+ memoise                2.0.1       2021-11-26 [1] CRAN (R 4.3.0)
+ munsell                0.5.0       2018-06-12 [1] CRAN (R 4.3.0)
+ mvtnorm                1.2-2       2023-06-08 [1] CRAN (R 4.3.0)
+ patchwork            * 1.1.2.9000  2023-08-11 [1] Github (thomasp85/patchwork@bd57553)
+ pbapply                1.7-2       2023-06-27 [1] CRAN (R 4.3.1)
+ pillar                 1.9.0       2023-03-22 [1] CRAN (R 4.3.0)
+ pkgbuild               1.4.2       2023-06-26 [1] CRAN (R 4.3.1)
+ pkgconfig              2.0.3       2019-09-22 [1] CRAN (R 4.3.0)
+ pkgload                1.3.2.9000  2023-07-05 [1] Github (r-lib/pkgload@3cf9896)
+ plyr                   1.8.8       2022-11-11 [1] CRAN (R 4.3.0)
+ png                    0.1-8       2022-11-29 [1] CRAN (R 4.3.0)
+ prettyunits            1.1.1.9000  2023-04-23 [1] Github (r-lib/prettyunits@8706d89)
+ pROC                   1.18.4      2023-07-06 [1] CRAN (R 4.3.1)
+ processx               3.8.2       2023-06-30 [1] CRAN (R 4.3.1)
+ ps                     1.7.5       2023-04-18 [1] CRAN (R 4.3.0)
+ purrr                * 1.0.2.9000  2023-08-11 [1] Github (tidyverse/purrr@ac4f5a9)
+ R.cache                0.16.0      2022-07-21 [1] CRAN (R 4.3.0)
+ R.methodsS3            1.8.2       2022-06-13 [1] CRAN (R 4.3.0)
+ R.oo                   1.25.0      2022-06-12 [1] CRAN (R 4.3.0)
+ R.utils                2.12.2      2022-11-11 [1] CRAN (R 4.3.0)
+ R6                     2.5.1.9000  2023-04-23 [1] Github (r-lib/R6@e97cca7)
+ ragg                   1.2.5       2023-01-12 [1] CRAN (R 4.3.0)
+ randomForest           4.7-1.1     2022-05-23 [1] CRAN (R 4.3.1)
+ RColorBrewer           1.1-3       2022-04-03 [1] CRAN (R 4.3.0)
+ Rcpp                   1.0.11      2023-07-06 [1] CRAN (R 4.3.1)
+ RCurl                  1.98-1.12   2023-03-27 [1] CRAN (R 4.3.0)
+ readr                * 2.1.4.9000  2023-08-03 [1] Github (tidyverse/readr@80e4dc1)
+ remotes                2.4.2.9000  2023-06-09 [1] Github (r-lib/remotes@8875171)
+ reticulate             1.31        2023-08-10 [1] CRAN (R 4.3.1)
+ rjson                  0.2.21      2022-01-09 [1] CRAN (R 4.3.0)
+ rlang                  1.1.1.9000  2023-06-09 [1] Github (r-lib/rlang@c55f602)
+ rmarkdown              2.23.4      2023-07-27 [1] Github (rstudio/rmarkdown@054d735)
+ rstudioapi             0.15.0.9000 2023-07-19 [1] Github (rstudio/rstudioapi@feceaef)
+ Rttf2pt1               1.3.12      2023-01-22 [1] CRAN (R 4.3.0)
+ S4Arrays               1.0.5       2023-07-24 [1] Bioconductor
+ S4Vectors            * 0.38.1      2023-05-02 [1] Bioconductor
+ scales                 1.2.1       2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo            1.2.2       2021-12-06 [1] CRAN (R 4.3.0)
+ shape                  1.4.6       2021-05-19 [1] CRAN (R 4.3.0)
+ stringi                1.7.12      2023-01-11 [1] CRAN (R 4.3.0)
+ stringr              * 1.5.0.9000  2023-08-11 [1] Github (tidyverse/stringr@08ff36f)
+ styler               * 1.10.1      2023-07-17 [1] Github (r-lib/styler@aca7223)
+ SummarizedExperiment * 1.30.2      2023-06-06 [1] Bioconductor
+ systemfonts            1.0.4       2022-02-11 [1] CRAN (R 4.3.0)
+ textshaping            0.3.6       2021-10-13 [1] CRAN (R 4.3.0)
+ tibble               * 3.2.1.9005  2023-05-28 [1] Github (tidyverse/tibble@4de5c15)
+ tidyr                * 1.3.0.9000  2023-04-23 [1] Github (tidyverse/tidyr@0764e65)
+ tidyselect             1.2.0       2022-10-10 [1] CRAN (R 4.3.0)
+ tidyverse            * 2.0.0.9000  2023-04-23 [1] Github (tidyverse/tidyverse@8ec2e1f)
+ timechange             0.2.0       2023-01-11 [1] CRAN (R 4.3.0)
+ tzdb                   0.4.0       2023-05-12 [1] CRAN (R 4.3.0)
+ usethis                2.2.2.9000  2023-07-11 [1] Github (r-lib/usethis@467ff57)
+ utf8                   1.2.3       2023-01-31 [1] CRAN (R 4.3.0)
+ uwot                   0.1.16.9000 2023-06-30 [1] Github (jlmelville/uwot@cef28ef)
+ vctrs                  0.6.3       2023-06-14 [1] CRAN (R 4.3.0)
+ vipor                  0.4.5       2017-03-22 [1] CRAN (R 4.3.0)
+ wesanderson            0.3.6.9000  2023-07-25 [1] Github (karthik/wesanderson@95d49de)
+ withr                  2.5.0       2022-03-03 [1] CRAN (R 4.3.0)
+ xfun                   0.40        2023-08-09 [1] CRAN (R 4.3.1)
+ XVector                0.40.0      2023-04-25 [1] Bioconductor
+ yaml                   2.3.7       2023-01-23 [1] CRAN (R 4.3.0)
+ yarrr                  0.1.6       2023-04-23 [1] Github (ndphillips/yarrr@e2e4488)
+ zlibbioc               1.46.0      2023-04-25 [1] Bioconductor
 
- [1] /opt/homebrew/lib/R/4.2/site-library
- [2] /opt/homebrew/Cellar/r/4.2.1_4/lib/R/library
+ [1] /opt/homebrew/lib/R/4.3/site-library
+ [2] /opt/homebrew/Cellar/r/4.3.1/lib/R/library
 
 ─ Python configuration ───────────────────────────────────────────────────────
  python:         /Users/jialei/.pyenv/shims/python
- libpython:      /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/libpython3.9.dylib
- pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10:/Users/jialei/.pyenv/versions/mambaforge-4.10.3-10
- version:        3.9.13 | packaged by conda-forge | (main, May 27 2022, 17:00:33)  [Clang 13.0.1 ]
- numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
- numpy_version:  1.22.4
- numpy:          /Users/jialei/.pyenv/versions/mambaforge-4.10.3-10/lib/python3.9/site-packages/numpy
+ libpython:      /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/libpython3.10.dylib
+ pythonhome:     /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3:/Users/jialei/.pyenv/versions/mambaforge-22.9.0-3
+ version:        3.10.9 | packaged by conda-forge | (main, Feb  2 2023, 20:26:08) [Clang 14.0.6 ]
+ numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
+ numpy_version:  1.24.3
+ numpy:          /Users/jialei/.pyenv/versions/mambaforge-22.9.0-3/lib/python3.10/site-packages/numpy
  
  NOTE: Python version was forced by RETICULATE_PYTHON
 
@@ -2536,11 +2434,10 @@ low counts [2]     : 0, 0%
 <p><br></p>
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{bhattacharyya,
-  author = {Samadrita Bhattacharyya and Jialei Duan and Ryan J. Vela and
-    Minoti Bhakta and Pietro Bajona and Pradeep P.A. Mammen and Gary C.
-    Hon and Nikhil V. Munshi},
-  editor = {},
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{bhattacharyya2023,
+  author = {Bhattacharyya, Samadrita and Duan, Jialei and J. Vela, Ryan
+    and Bhakta, Minoti and Bajona, Pietro and P.A. Mammen, Pradeep and
+    C. Hon, Gary and V. Munshi, Nikhil},
   publisher = {American Heart Association},
   title = {Accurate {Classification} of {Cardiomyopathy} {Diagnosis} by
     {Chromatin} {Accessibility}},
@@ -2548,7 +2445,7 @@ low counts [2]     : 0, 0%
   volume = {146},
   number = {11},
   pages = {878 - 881},
-  date = {},
+  date = {2023-08-12},
   url = {https://doi.org/10.1161/CIRCULATIONAHA.122.059659},
   doi = {10.1161/CIRCULATIONAHA.122.059659},
   issn = {0009-7322},
@@ -2558,10 +2455,10 @@ low counts [2]     : 0, 0%
     signatures at a sequencing depth achievable by benchtop
     instruments.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bhattacharyya" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Samadrita Bhattacharyya, Jialei Duan, Ryan J. Vela, Minoti Bhakta,
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bhattacharyya2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Bhattacharyya, Samadrita, Jialei Duan, Ryan J. Vela, Minoti Bhakta,
 Pietro Bajona, Pradeep P.A. Mammen, Gary C. Hon, and Nikhil V. Munshi.
-n.d. <span>“Accurate Classification of Cardiomyopathy Diagnosis by
+2023. <span>“Accurate Classification of Cardiomyopathy Diagnosis by
 Chromatin Accessibility.”</span> <em>Circulation</em> 146 (11): 878–81.
 <a href="https://doi.org/10.1161/CIRCULATIONAHA.122.059659">https://doi.org/10.1161/CIRCULATIONAHA.122.059659</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -2605,6 +2502,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -2673,13 +2597,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2706,9 +2632,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -2744,10 +2684,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2757,8 +2696,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2773,6 +2721,195 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -2811,12 +2948,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/leafletjs\.com/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/leafletjs\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -2835,26 +2972,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Copyright © 2022, Jialei Duan</div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-left">
+<p>Copyright © 2022 - 2023, Jialei Duan</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology/blob/main/LICENSE"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> License</a>
+    <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology/blob/main/LICENSE">
+<p><i class="fa-solid fa-file-lines" aria-hidden="true"></i> License</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</a>
+    <a class="nav-link" href="./about.html">
+<p><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</p>
+</a>
   </li>  
 </ul>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jlduan">
-      <i class="bi bi-twitter" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/jlduan/cardiomyopathy-etiology">
       <i class="bi bi-github" role="img">
 </i> 
